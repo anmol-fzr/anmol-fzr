@@ -17,6 +17,16 @@ body {
   @apply bg-primary text-text ;
   font-family: 'Rubik', sans-serif;
 }
+::selection{
+  @apply bg-white/5 text-secondary  ; 
+}
+
+.section{
+  height: 75vh;
+  max-height: 768px;
+  /* height: clamp( 75vh,100vh, 1080px ); */
+}
+
 a{
   @apply hover:text-secondary ;
 }

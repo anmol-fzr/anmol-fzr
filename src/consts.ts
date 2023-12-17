@@ -139,7 +139,7 @@ const contactFields = [
     name: "phone",
     placeholder: "XXXX-XXX-XXX",
     type: "number",
-    pattern: "[0-9]{10}",
+    pattern: "[3-9]{10}",
     error: "Enter a valid Phone Number"
   }
 ] as const;
@@ -158,11 +158,11 @@ const linksArray = [
   },
   {
     to: "/#experience",
-    text: "experience"
+    text: "Experience"
   },
   {
     to: "/#projects",
-    text: "projects"
+    text: "Projects"
   },
   {
     to: "/#contact",

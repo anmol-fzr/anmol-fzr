@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev --host ",
-    "build": "astro check && astro build && cp ./robots.txt ./public/ ",
+    "clean":"rm -rf dist/",
+    "build": "npm run clean && astro check && astro build && cp ./robots.txt ./public/ ",
+    "deploy": "bun run build && firebase deploy",
     "preview": "astro preview"
   },
   "dependencies": {
