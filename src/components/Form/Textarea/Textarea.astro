@@ -1,0 +1,19 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"textarea"> {
+	label: string;
+}
+
+const { label, ...props} = Astro.props
+---
+    <div class="w-full">
+      <label class="capitalize mb-0.5" for={label}>
+        {label}
+      </label>
+      <textarea id={label} rows={4}
+        {...props}
+        class="input-styles"
+      />
+    </div>
+  

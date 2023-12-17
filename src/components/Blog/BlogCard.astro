@@ -1,0 +1,46 @@
+---
+import FormattedDate from "../../components/FormattedDate.astro";
+import CardBody from "./CardBody.astro"
+
+const sizes = {
+    lg:"w-full max-w-[900px] mx-auto",
+    sm:"max-w-[600px] aspect-video mx-auto even:ml-0  odd:mr-0 "
+} as const
+
+type T = keyof typeof sizes;
+interface Props {
+    slug: string;
+    size?:   T ; 
+    heroImage: any;
+    description:string;
+    pubDate: Date;
+    title: string;
+}
+const { slug,heroImage, pubDate,description, title ,size="sm" } = Astro.props;
+const t = pubDate.toString()
+---
+
+
+<!-- <Component
+	class:list={["flex flex-1 flex-col gap-6 p-6 text-left", className]}
+	href={href}
+	{...attrs}
+>
+	<slot />
+</Component> -->
+
+<li class={` bg-white/[0.05] group hover:scale-[1.02] rounded-2xl ${sizes[size]}    `}    >
+    <a href={`/blog/${slug}/`} >
+        <img transition:name={"image"+t} class="w-full group-hover:rounded-xl  group-hover:scale-[1.04] rounded-t-2xl " src={heroImage} alt={title} />
+    <CardBody>
+        <h4  transition:name={"title"+t} class="text-2xl  ">{title}</h4>
+        <p transition:name={"desc"+t}  class="text-lg text-white/75  " >
+            {description}
+            </p>
+        <p class="date">
+            <FormattedDate tName={"date"+t} date={pubDate} />
+        </p>
+    </CardBody>
+    </a>
+</li>
+

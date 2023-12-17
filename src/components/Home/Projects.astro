@@ -1,0 +1,25 @@
+---
+import Section from "../Section/Section.astro";
+import Heading from "../Heading.astro";
+import { projects } from "../../consts";
+---
+
+<Section id="projects">
+  <div class="flex flex-col gap-16">
+    <Heading>Projects</Heading>
+
+    <div class="flex flex-wrap gap-6">
+      {
+        projects.map(({ src, alt }) => (
+          <div class="max-w-md p-2 border border-white ">
+            {/* <Image width={800} height={450} {...{ alt, src }} /> */}
+            <img {...{ src, alt }} width={800} height={450} />
+            <div class="flex gap-2 m-2 mx-auto mb-0 w-fit ">
+              {/* {tech.map((icon) => icon)} */}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Section> 

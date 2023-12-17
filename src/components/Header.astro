@@ -1,0 +1,13 @@
+---
+import Links from "./Navbar/Links.astro"
+import { NAME } from "../consts";
+---
+
+<header class="w-full h-[7.5vh] shadow-2xl items-center sticky top-0 backdrop-blur-sm bg-gradient-to-t from-transparent via-primary/75 to-primary z-10 flex justify-between " >
+		<div class="w-fit">
+		  <a href="/" class="px-4 text-xl">
+			{NAME}
+		  </a>
+		</div>
+		 <Links />
+</header>

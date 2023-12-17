@@ -1,0 +1,8 @@
+---
+import HeaderLink from "../HeaderLink.astro";
+import { linksArray } from "../../consts";
+---
+
+<ul class="flex gap-4 pr-4 mx-auto mr-0">
+  {linksArray.map(({ to, text }) => <HeaderLink href={to} text={text} />)}
+</ul>

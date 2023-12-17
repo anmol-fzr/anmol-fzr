@@ -1,0 +1,12 @@
+---
+type Props = {
+    text: string;
+    href: string;
+    icon: any;
+};
+const { text, href, icon } = Astro.props;
+---
+
+<a href={href} aria-label={text} aria-labelledby={text} target="_blank">
+    <img src={icon} alt={text} width={32} height={32} />
+</a>

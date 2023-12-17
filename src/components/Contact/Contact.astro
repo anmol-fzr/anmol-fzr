@@ -1,0 +1,37 @@
+---
+import Heading from "../Heading.astro";
+import Section from "../Section/Section.astro";
+import FootLinks from "../Footer/FootLinks.astro";
+---
+
+<Section id="contact">
+  <div
+    class="flex flex-col items-start justify-between w-full gap-12 md:flex-row"
+  >
+    <div
+      class="flex flex-col items-center w-full gap-4 md:items-start md:w-6/12 mx-auto "
+    >
+      <Heading>Just say hi 👋.</Heading>
+      <p class="text-lg text-center md:text-left md:text-2xl">
+        I&apos;m always open to discuss your project and talk about new things
+      </p>
+      <div class="flex items-center justify-between w-full flex-reverse">
+        <FootLinks />
+      </div>
+    </div>
+    <!-- <div class="flex items-center w-full md:w-6/12"> -->
+    <!--   <form onsubmit={handleSubmit}  class="flex flex-col items-center w-full gap-4"> -->
+    <!--     { -->
+    <!--       contactFields.map(({ name, error, placeholder, type, pattern }) => ( -->
+    <!--         <Input -->
+    <!--           label={name} -->
+    <!--           {...{ name, pattern, placeholder, type, error }} -->
+    <!--         /> -->
+    <!--       )) -->
+    <!--     } -->
+    <!--     <Textarea label="Message" placeholder="Message" /> -->
+    <!--     <Button>Submit</Button> -->
+    <!--   </form> -->
+    <!-- </div> -->
+  </div>
+</Section>

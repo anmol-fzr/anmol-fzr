@@ -1,0 +1,25 @@
+[debug] [2023-12-16T15:47:06.413Z] ----------------------------------------------------------------------
+[debug] [2023-12-16T15:47:06.415Z] Command:       /usr/bin/node /home/immortal/.bun/bin/firebase deploy
+[debug] [2023-12-16T15:47:06.415Z] CLI Version:   13.0.2
+[debug] [2023-12-16T15:47:06.415Z] Platform:      linux
+[debug] [2023-12-16T15:47:06.415Z] Node Version:  v21.4.0
+[debug] [2023-12-16T15:47:06.415Z] Time:          Sat Dec 16 2023 21:17:06 GMT+0530 (India Standard Time)
+[debug] [2023-12-16T15:47:06.415Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-16T15:47:06.466Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-16T15:47:06.466Z] > authorizing via signed-in user (ainsa2279@gmail.com)
+[debug] [2023-12-16T15:47:06.466Z] [iam] checking project anmol-fzr-temp for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-16T15:47:06.467Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/anmol-fzr-temp:testIamPermissions [none]
+[debug] [2023-12-16T15:47:06.467Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/anmol-fzr-temp:testIamPermissions x-goog-quota-user=projects/anmol-fzr-temp
+[debug] [2023-12-16T15:47:06.467Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anmol-fzr-temp:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-16T15:47:08.334Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/anmol-fzr-temp:testIamPermissions 200
+[debug] [2023-12-16T15:47:08.334Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anmol-fzr-temp:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-16T15:47:08.335Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/anmol-fzr-temp [none]
+[debug] [2023-12-16T15:47:08.940Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/anmol-fzr-temp 200
+[debug] [2023-12-16T15:47:08.940Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/anmol-fzr-temp {"projectId":"anmol-fzr-temp","projectNumber":"102994683701","displayName":"anmol-fzr-temp","name":"projects/anmol-fzr-temp","resources":{"hostingSite":"anmol-fzr-temp"},"state":"ACTIVE","etag":"1_ce99fa47-6dbb-4797-9600-64a1236a5b6d"}
+[info] 
+[info] === Deploying to 'anmol-fzr-temp'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-12-16T15:47:08.949Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anmol-fzr-temp/versions [none]
+[debug] [2023-12-16T15:47:08.949Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anmol-fzr-temp/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}

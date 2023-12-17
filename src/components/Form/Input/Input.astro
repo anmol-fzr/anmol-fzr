@@ -1,0 +1,25 @@
+--- 
+interface Props {
+    label: string;
+    name: string;
+    type: "number"|"text"|"email";
+    pattern: string;
+    error: string;
+    placeholder: string;
+}
+const { label, name, type, placeholder, pattern, error } =
+  Astro.props;
+---
+
+<div class="w-full">
+  <label class="capitalize mb-0.5" for={name}>
+    {label}
+  </label>
+  <input
+    id={name}
+    inputmode={type==="number"?"numeric":"text"}
+    {...{ type, placeholder,name,pattern }}    
+    title={error}
+    class="input-styles invalid:border-red-500"
+  />
+</div>

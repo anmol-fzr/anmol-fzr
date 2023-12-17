@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/layout.astro"
+import Hero from "../components/Home/Hero.astro"
+import WhatIDo from "../components/Home/WhatIDo.astro"
+import Skills from "../components/Home/Skills.astro"
+import Projects from "../components/Home/Projects.astro"
+import Experience from "../components/Home/Experience.astro"
+import Contact from "../components/Contact/Contact.astro"
+---
+
+<Layout {...{} as any} >
+	<div class="space-y-8">
+		<Hero />
+		<WhatIDo />
+		<Skills  />
+		<Projects  />
+		<Experience  />
+		<Contact  /> 
+	</div>
+</Layout>

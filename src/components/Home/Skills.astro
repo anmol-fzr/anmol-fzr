@@ -1,0 +1,23 @@
+---
+import Section from "../Section/Section.astro";
+import Heading from "../Heading.astro";
+import { skills } from "../../consts";
+---
+
+<Section id="skills">
+  <div class="flex flex-col gap-16">
+    <Heading>Skills</Heading>
+    <div class="grid justify-between grid-cols-2 md:grid-cols-3 gap-y-8">
+      {
+        skills.map((name) => (
+          <div>
+            <span class="flex items-center gap-2 text-lg font-thin">
+              {/*icon*/}
+              {name}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Section>

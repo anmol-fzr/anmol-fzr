@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from "astro/types";
+interface Props extends HTMLAttributes<"a"> {
+	text: string;
+}
+const { href, text, target="_self" } = Astro.props;
+---
+<li class={href!=="/blog"?"hidden sm:block ":" mr-0  !w-fit p-0 "+" capitalize "}  >
+	<a {...{ href,target }} aria-label={text} aria-labelledby={text}>
+		{text}
+	</a>
+</li>
+
