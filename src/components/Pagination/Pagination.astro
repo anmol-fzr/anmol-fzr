@@ -1,0 +1,22 @@
+---
+import PageButton from "./PageButton.astro"
+interface Props {
+  perPage: number
+  total: number
+}
+
+const {total,perPage} = Astro.props;
+const max = Math.ceil(total/perPage)
+---
+
+<div class="flex mx-auto w-fit items-center mt-12" >
+  {Array.from({ length: max}).map((_,val)=> (val < 4) ? (
+  <PageButton current={val+1} />
+  ): (<></>) )}  
+  {max>4? (
+    <>
+      <PageButton current="..." />
+      <PageButton current={Math.ceil(total/perPage)} />
+    </>):(<></>)}
+    
+</div>

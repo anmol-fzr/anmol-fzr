@@ -1,0 +1,16 @@
+---
+interface Props {
+  current: number | "..."
+  
+}
+const { current } = Astro.props
+
+const number = Astro.url.pathname.at(-1)
+const currPage = isNaN(Number(number)) ? 1 : Number(number)
+
+const isActive = currPage === current
+---
+<a href={"/blog/"+current} class={` ${isActive? "text-secondary border-white":"border-transparent"} border p-2 px-4 hover:bg-neutral-900 rounded-md  hover:text-secondary `} >
+    {current}
+</a>
+
