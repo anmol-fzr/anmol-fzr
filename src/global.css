@@ -20,11 +20,10 @@ body {
 ::selection{
   @apply bg-white/5 text-secondary  ; 
 }
-
 .section{
-  height: 75vh;
-  max-height: 768px;
-  /* height: clamp( 75vh,100vh, 1080px ); */
+  /* height: 75vh; */
+  /* @apply md:max-h-[768px]  */
+  height: clamp( 75vh,85vh, 1080px );
 }
 
 a{
