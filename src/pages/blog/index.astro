@@ -10,7 +10,7 @@ const currPage = isNaN(Number(number)) ? 1 : Number(number)
 const blogPerPage = 5
 const startIndex = (currPage - 1) * blogPerPage;
 const endIndex = startIndex + blogPerPage;
-const allPosts =(await getCollection("blog")) 
+const allPosts =(await getCollection("blog")).filter(({data})=> data.isPublished)
 const totalPosts = allPosts.length
 const posts = allPosts.sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).slice(startIndex,endIndex);
 ---

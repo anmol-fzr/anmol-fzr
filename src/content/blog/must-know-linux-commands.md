@@ -3,6 +3,7 @@ title: "10 Must Known Linux Commands"
 description: "10 Usefull Linux Commands that every developer should know"
 keywords: "astro view-transition new api web-api animation transition"
 pubDate: "Dec 26 2023"
+isPublished: true
 heroImage: "/blog/must-know-linux-commands.webp"
 ---
 

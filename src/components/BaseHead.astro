@@ -16,24 +16,24 @@ const {
 	keywords = SITE_KEYWORD,
 	image = "/main.webp",
 } = Astro.props;
+
 ---
 
-<!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="google-site-verification" content="M7cRQ7-GP19WVgwgB811IV0CgWuSRW83k0L_gIcQy4I" />
-<!-- Canonical URL -->
+
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Primary Meta Tags -->
+
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
 <meta name="robots" content="index, follow" />
-<!-- Open Graph / Facebook -->
+
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_IN" />
 <meta property="og:url" content={Astro.url} />
@@ -42,7 +42,7 @@ const {
 <meta property="og:image" content={new URL(image, Astro.url)} />
 <meta property="og:image:alt" content={description} />
 <meta property="og:site_name" content={title} />
-<!-- Twitter -->
+
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
