@@ -5,11 +5,11 @@ import Layout from "./layout.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title,keywords, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title,keywords, description, pubDate, updatedDate, heroImage,isPublished } = Astro.props;
 const  t = pubDate.toString()
 ---
 
-<Layout {...{ title,keywords, description, pubDate, updatedDate, heroImage }}>
+<Layout {...{ title,keywords, description, pubDate, updatedDate, heroImage, isPublished }}>
 	<article>
 		<div class="flex flex-col gap-4 my-2 mb-6">	
 			<h1 transition:name={"title"+t} class="text-4xl font-semibold mx-auto !w-fit">

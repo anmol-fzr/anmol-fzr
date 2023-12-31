@@ -2,8 +2,8 @@
 title: "Levels and Layers of Abstraction in a Linux Kernel"
 description: "Levels and Layers of Abstraction in a Linux Kernel"
 keywords: "Linux kernel, abstraction layers, operating system architecture, linux internals, user space vs. kernel space"
-pubDate: "Jan 05 2023"
-isPublished: false
+pubDate: "Dec 31 2023"
+isPublished: true
 heroImage: "/blog/must-know-linux-commands.webp"
 ---
 
