@@ -12,7 +12,7 @@ const startIndex = (currPage - 1) * blogPerPage;
 const endIndex = startIndex + blogPerPage;
 const allPosts =(await getCollection("blog")).filter(({data})=> data.isPublished)
 const totalPosts = allPosts.length
-const posts = allPosts.sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).slice(startIndex,endIndex);
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(startIndex,endIndex);
 ---
 
 <Layout {...{}as any} >
