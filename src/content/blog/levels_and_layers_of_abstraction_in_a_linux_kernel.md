@@ -32,5 +32,12 @@ The running programs that the kernel manages are collectively reffered as the us
 
 ### Kernel Process vs User Process
 
-The kernel runs in the kernel mode and the user process runs in the user mode, The processes running in the kernel mode has unrestricted access to the main memory. This is powerfull and dangerous privilege to crash the operting system. Whereas the user mode process are managed by the kernel. The part of main memory on kernel can access is reffered as kernel space.
+The kernel runs in the kernel mode and the user process runs in the user mode, The processes running in the kernel mode has unrestricted access to the main memory. This is powerfull and dangerous privilege to crash the operting system. Whereas the user mode process are managed by the kernel. The part of main memory only kernel can access is reffered as kernel space.
 User mode on the other hand had very limited part of the main memory to interact with and the safe CPU operations in this way if a user process crashes the rest of the system can run smoothly.
+
+
+### What's Next ?
+
+In the upcoming blog we will discuss [The Process Management in the Linux Kernel](/blog/process-management-in-a-linux-kernel)
+
+
