@@ -1,9 +1,10 @@
-const NAME = "Anmol"
-const SITE_TITLE = NAME + ' | Expert Web Developer: Empowering Online Success';
-const SITE_DESCRIPTION = 'Transforming Ideas into Digital Realities: Experience personalized web development solutions tailored to your unique vision. Our professional web developer crafts captivating websites with a focus on user experience, responsiveness, and flawless functionality. Discover how we can bring your online presence to life. Contact us for a consultation today.';
-const SITE_KEYWORD = "javascript developer,web developer india, web developer means,google web developer,web developer gurgaon,web developer delhi,web developer punjab,web developer india,web developer banglore,web developer google, react developer, nextjs developer, tailwind css developer, web developer, frontend developer, software developer, UI/UX developer, responsive web design, web development services,web engineer,full stack javascript developer,mern stack developer,certified javscript developer"
-const EMAIL = "anmoljan2005@gmail.com"
-
+const NAME = "Anmol";
+const SITE_TITLE = NAME + " | Expert Web Developer: Empowering Online Success";
+const SITE_DESCRIPTION =
+  "Transforming Ideas into Digital Realities: Experience personalized web development solutions tailored to your unique vision. Our professional web developer crafts captivating websites with a focus on user experience, responsiveness, and flawless functionality. Discover how we can bring your online presence to life. Contact us for a consultation today.";
+const SITE_KEYWORD =
+  "javascript developer,web developer india, web developer means,google web developer,web developer gurgaon,web developer delhi,web developer punjab,web developer india,web developer banglore,web developer google, react developer, nextjs developer, tailwind css developer, web developer, frontend developer, software developer, UI/UX developer, responsive web design, web development services,web engineer,full stack javascript developer,mern stack developer,certified javscript developer";
+const EMAIL = "anmoljan2005@gmail.com";
 
 const skills = [
   "HTML 5",
@@ -22,19 +23,18 @@ const projects = [
   {
     src: "https://firebasestorage.googleapis.com/v0/b/anmol-fzr.appspot.com/o/img.webp?alt=media&token=fb26093b-a998-44fb-b46d-56c682ceb14f",
     // tech: [icons.react, icons.tailwind],
-    alt: "vimaanvihar"
+    alt: "vimaanvihar",
   },
   {
     src: "https://firebasestorage.googleapis.com/v0/b/anmol-fzr.appspot.com/o/vimanvihaar.webp?alt=media&token=11bc27bd-9adb-4b63-928b-b2c4ea118d7a",
     // tech: [icons.react, icons.tailwind],
-    alt: "supervisainsurancequote"
+    alt: "supervisainsurancequote",
   },
   {
     src: "https://firebasestorage.googleapis.com/v0/b/anmol-fzr.appspot.com/o/sviq-admin.webp?alt=media&token=8e7a4634-6f40-4d79-b00a-3b95339f1493",
     // tech: [icons.react, icons.tailwind],
-    alt: "supervisainsurancequoteadmin"
+    alt: "supervisainsurancequoteadmin",
   },
-
 ] as const;
 const footLinks = [
   {
@@ -71,7 +71,6 @@ const internships = [
     at: "",
     to: "November 2023",
   },
-
 ] as const;
 const hackathons = [
   {
@@ -103,7 +102,7 @@ const community = [
     at: "",
     desc: "",
     to: "present",
-  }
+  },
 ] as const;
 const experiences = [
   {
@@ -118,61 +117,72 @@ const experiences = [
     name: "Hackathon",
     data: hackathons,
   },
-
 ] as const;
 const contactFields = [
   {
     name: "name",
     placeholder: "John Doe",
     type: "text",
-    pattern: "^[a-zA-Z]+(?:[\s'-][a-zA-Z]+)*$",
-    error: "Enter a valid Name"
+    pattern: "^[a-zA-Z]+(?:[s'-][a-zA-Z]+)*$",
+    error: "Enter a valid Name",
   },
   {
     name: "email",
     placeholder: "johndoe@example.com",
     type: "email",
     pattern: "/^[w-.]+@([w-]+.)+[w-]{2,4}$/g",
-    error: "Enter a valid Email"
+    error: "Enter a valid Email",
   },
   {
     name: "phone",
     placeholder: "XXXX-XXX-XXX",
     type: "number",
     pattern: "[3-9]{10}",
-    error: "Enter a valid Phone Number"
-  }
+    error: "Enter a valid Phone Number",
+  },
 ] as const;
 const linksArray = [
   {
     to: "/blog",
-    text: "Blogs"
+    text: "Blogs",
   },
   {
     to: "/#services",
-    text: "What I Do ?"
+    text: "What I Do ?",
   },
   {
     to: "/#skills",
-    text: "Skills"
+    text: "Skills",
   },
   {
     to: "/#experience",
-    text: "Experience"
+    text: "Experience",
   },
   {
     to: "/#projects",
-    text: "Projects"
+    text: "Projects",
   },
   {
     to: "/#contact",
-    text: "Contact"
+    text: "Contact",
   },
   {
     target: "_blank",
-    to: "https://drive.google.com/file/d/1xHq4o-C2UvxL3iyqAII2C6ohBWjQVwTG/view?usp=sharing",
-    text: "Resume"
-  }
+    to: "https://drive.google.com/file/d/1ENDeXHONWPD0z9mmTHa5bwHKzoixzyUj/view?usp=drive_link",
+    text: "Resume",
+  },
 ] as const;
 
-export { NAME, SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORD, footLinks, experiences, contactFields, EMAIL, linksArray, projects,skills }
+export {
+  NAME,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  SITE_KEYWORD,
+  footLinks,
+  experiences,
+  contactFields,
+  EMAIL,
+  linksArray,
+  projects,
+  skills,
+};
