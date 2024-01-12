@@ -23,8 +23,8 @@ const t = pubDate.toString()
     <a href={`/blog/${slug}/`} >
       <img transition:name={"image"+t}  width="900" height="470" class="w-full bg-white/10 group-hover:rounded-xl group-hover:scale-[1.04] rounded-t-2xl" src={heroImage} alt={title} />
     <CardBody>
-        <h4  transition:name={"title"+t} class="text-2xl  ">{title}</h4>
-        <p transition:name={"desc"+t}  class="text-lg text-white/75  " >
+        <h4  transition:name={"title"+t} class="text-lg md:text-2xl  ">{title}</h4>
+        <p transition:name={"desc"+t}  class="md:text-lg text-white/75  " >
             {description}
             </p>
         <p class="date">

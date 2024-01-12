@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,32 +11,32 @@
   }
 }
 * {
-  transition:  all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 body {
-  @apply bg-primary text-text ;
-  font-family: 'Rubik', sans-serif;
+  @apply bg-primary text-text;
+  font-family: "Rubik", sans-serif;
 }
-::selection{
-  @apply bg-white/5 text-secondary  ; 
+::selection {
+  @apply bg-white/5 text-secondary;
 }
-.section{
+.section {
   /* height: 75vh; */
   /* @apply md:max-h-[768px]  */
-  height: clamp( 75vh,85vh, 1080px );
+  height: clamp(75vh, 85vh, 1080px);
 }
 
-a{
-  @apply hover:text-secondary ;
+a {
+  @apply hover:text-secondary;
 }
 html {
   scroll-behavior: smooth;
 }
 .date {
-  @apply text-gray-600 dark:text-gray-300 ;
+  @apply text-gray-600 dark:text-gray-300;
 }
 .input-styles {
-  @apply w-full p-3 px-6 text-white border rounded-md outline-none placeholder:normal-case focus:outline-none border-white/25 focus:border-white/75 bg-black/75;
+  @apply w-full p-3 px-6 text-white border rounded-md outline-none placeholder:normal-case focus:outline-none border-white/25 focus:border-white/75 bg-primary/75;
 }
 
 ::-webkit-scrollbar {
