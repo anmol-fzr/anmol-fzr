@@ -7,4 +7,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://anmol-fzr.web.app",
   integrations: [sitemap(), tailwind(), astroImageTools],
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "viewport",
+  },
 });
