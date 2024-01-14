@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev --host ",
-    "clean":"rm -rf dist/",
+    "clean": "rm -rf dist/",
     "build": "npm run clean && astro check && astro build && cp ./robots.txt ./public/ ",
     "deploy": "bun run build && firebase deploy",
     "preview": "astro preview"
@@ -16,6 +16,7 @@
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "astro": "^4.0.4",
+    "astro-imagetools": "^0.9.0",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.3.3"
   },
