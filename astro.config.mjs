@@ -1,14 +1,13 @@
 import { defineConfig } from "astro/config";
-import { astroImageTools } from "astro-imagetools";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import icon from "astro-icon";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://anmol-fzr.web.app",
-  integrations: [sitemap(), tailwind(), astroImageTools],
+  integrations: [sitemap(), tailwind(),  icon()],
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: "viewport",
-  },
+    defaultStrategy: "viewport"
+  }
 });

@@ -7,17 +7,15 @@ const SITE_KEYWORD =
 const EMAIL = "anmoljan2005@gmail.com";
 
 const skills = [
-  "HTML 5",
-  "CSS 3",
-  "Javascript",
-  "React JS",
-  "Next JS",
-  "Node JS",
-  "Firebase",
-  "PostgreSQL",
-  "Mongo DB",
-  "Typescript",
-  "Git",
+  { name: "HTML 5", icon: "html" },
+  { name: "CSS 3", icon: "css" },
+  { name: "Javascript", icon: "js" },
+  { name: "Typescript", icon: "ts" },
+  { name: "React JS", icon: "reactjs" },
+  { name: "Next JS", icon: "nextjs" },
+  { name: "Node JS", icon: "nodejs" },
+  { name: "Mongo DB", icon: "mongodb" },
+  { name: "Git", icon: "git" },
 ];
 const projects = [
   {
@@ -40,22 +38,22 @@ const footLinks = [
   {
     href: "https://github.com/anmol-fzr/anmol-fzr",
     text: "github",
-    icon: "/icons/github.svg",
+    icon: "github",
   },
   {
     href: "https://linkedin.com/in/anmol-fzr",
     text: "linkedin",
-    icon: "/icons/linkedin.svg",
+    icon: "linkedin",
   },
   {
     href: "https://codepen.io/the-anmol",
     text: "codepen",
-    icon: "/icons/codepen.svg",
+    icon: "codepen",
   },
   {
     href: "mailto:anmoljan2005@gmail.com",
     text: "email",
-    icon: "/icons/email.svg",
+    icon: "email",
   },
 ] as const;
 const internships = [

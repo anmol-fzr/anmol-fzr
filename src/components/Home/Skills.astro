@@ -2,6 +2,7 @@
 import Section from "../Section/Section.astro";
 import Heading from "../Heading.astro";
 import { skills } from "../../consts";
+import {Icon} from "astro-icon/components"
 ---
 
 <Section id="skills">
@@ -9,10 +10,10 @@ import { skills } from "../../consts";
     <Heading>Skills</Heading>
     <div class="grid justify-between grid-cols-2 md:grid-cols-3 gap-y-8">
       {
-        skills.map((name) => (
+        skills.map(({name,icon}) => (
           <div>
             <span class="flex items-center gap-2 text-lg font-thin">
-              {/*icon*/}
+              <Icon name={icon} size={32}/>
               {name}
             </span>
           </div>
