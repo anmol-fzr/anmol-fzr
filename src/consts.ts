@@ -1,3 +1,7 @@
+import sviq from "./assets/sviq.webp";
+import vimaanvihar from "./assets/vimanvihaar.webp";
+import sviqAdmin from "./assets/sviq-admin.webp";
+
 const NAME = "Anmol";
 const SITE_TITLE = NAME + " | Expert Web Developer: Empowering Online Success";
 const SITE_DESCRIPTION =
@@ -19,18 +23,15 @@ const skills = [
 ];
 const projects = [
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/anmol-fzr.appspot.com/o/img.webp?alt=media&token=fb26093b-a998-44fb-b46d-56c682ceb14f",
-    // tech: [icons.react, icons.tailwind],
+    src: vimaanvihar,
     alt: "vimaanvihar",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/anmol-fzr.appspot.com/o/vimanvihaar.webp?alt=media&token=11bc27bd-9adb-4b63-928b-b2c4ea118d7a",
-    // tech: [icons.react, icons.tailwind],
+    src: sviq,
     alt: "supervisainsurancequote",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/anmol-fzr.appspot.com/o/sviq-admin.webp?alt=media&token=8e7a4634-6f40-4d79-b00a-3b95339f1493",
-    // tech: [icons.react, icons.tailwind],
+    src: sviqAdmin,
     alt: "supervisainsurancequoteadmin",
   },
 ] as const;
