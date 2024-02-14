@@ -8,7 +8,7 @@
     "build": "npm run clean && astro check && astro build && cp ./robots.txt ./public/ ",
     "deploy": "bun run build && firebase deploy && bun run open",
     "open": "xdg-open 'https://anmol-fzr.web.app'",
-    "preview": "astro preview"
+    "preview": "astro preview --host"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.2",
@@ -24,6 +24,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "^0.5.10",
+    "@vite-pwa/astro": "^0.2.0"
   }
 }
