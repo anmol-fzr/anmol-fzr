@@ -3,16 +3,16 @@ import Layout from "../../layouts/layout.astro";
 import BlogCard from "../../components/Blog/BlogCard.astro";
 import { getCollection } from "astro:content";
 import BlogTitle from "../../components/Typo/BlogTitle.astro";
-import Pagination from "../../components/Pagination/Pagination.astro"
+// import Pagination from "../../components/Pagination/Pagination.astro"
 
-const number = Astro.url.pathname.at(-1)
-const currPage = isNaN(Number(number)) ? 1 : Number(number)
-const blogPerPage = 5
-const startIndex = (currPage - 1) * blogPerPage;
-const endIndex = startIndex + blogPerPage;
+// const number = Astro.url.pathname.at(-1)
+// const currPage = isNaN(Number(number)) ? 1 : Number(number)
+// const blogPerPage = 5
+// const startIndex = (currPage - 1) * blogPerPage;
+// const endIndex = startIndex + blogPerPage;
+// const totalPosts = allPosts.length
 const allPosts =(await getCollection("blog")).filter(({data})=> data.isPublished)
-const totalPosts = allPosts.length
-const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(startIndex,endIndex);
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Layout {...{}as any} >
@@ -32,6 +32,6 @@ const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.
 				))
 			}
 		</ul>
-    <Pagination perPage={blogPerPage} total={totalPosts} />
+    <!-- <Pagination perPage={blogPerPage} total={totalPosts} /> -->
 	</section>
 </Layout>
