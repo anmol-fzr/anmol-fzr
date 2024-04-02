@@ -1,45 +1,41 @@
 {
-    "hosting": {
-        "public": "dist",
-        "ignore": [
-            "firebase.json",
-            "**/.*",
-            "**/node_modules/**"
-        ],
-        "rewrites": [
-            {
-                "source": "**",
-                "destination": "/index.html"
-            }
-        ],
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|html)",
         "headers": [
           {
-                "source": "**/*.@(js)",
-                "headers": [
-                    {
-                        "key": "Access-Control-Allow-Origin",
-                        "value": "max-age=30672000"
-                    }
-                ]
-            },
-            {
-                "source": "**/*.@(eot|otf|ttf|ttc|woff|css)",
-                "headers": [
-                    {
-                        "key": "Access-Control-Allow-Origin",
-                        "value": "max-age=30672000"
-                    }
-                ]
-            },
-            {
-                "source": "**/*.@(jpg|jpeg|gif|png)",
-                "headers": [
-                    {
-                        "key": "Cache-Control",
-                        "value": "max-age=30672000"
-                    }
-                ]
-            }
+            "key": "Access-Control-Allow-Origin",
+            "value": "max-age=31536000"
+          }
         ]
-    }
+      },
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
+    ]
+  }
 }

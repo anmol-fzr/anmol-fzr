@@ -12,17 +12,12 @@ import { experiences } from "../../consts";
           <h2 class="text-3xl font-semibold">{name}</h2>
           <div class="flex flex-col justify-between w-full gap-2 pt-8 ">
             {data.map(({ title, at = "", from = "", to = "" }) => (
-              <div class={false ? "gap-2" : ""}>
                 <div class={`flex flex-col gap-2 text-lg font-thin`}>
                   <p class="text-lg font-medium">
                     {title} {at && "( " + at + " )"}{" "}
                     {from && "( " + from + " - " + to + " )"}
                   </p>
-                  {/*
-                {desc && <p class="text-sm line-clamp-3">{desc}</p>}
-              */}
                 </div>
-              </div>
             ))}
           </div>
         </div>
@@ -30,21 +25,3 @@ import { experiences } from "../../consts";
     }
   </div>
 </Section>
-
-<!-- // desc: (
-    //   <>
-    //     In June 2023, I got selected as a full-stack Web Developer Intern at
-    //     <a 
-    //       aria-label="build up communications"
-    //       href="https://buildupcommunications.com/"
-    //       target="_blank"
-    //     >
-    //       {" "}
-    //       Build Up Communications.{" "}
-    //     </a>
-    //     During my internship, I got the opportunity to gain valuable hands-on
-    //     experience in my field of study. From day one, I was immersed in a
-    //     dynamic and challenging work environment that fostered my professional
-    //     growth.
-    //   </>
-    // ) --> 

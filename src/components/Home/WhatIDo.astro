@@ -4,11 +4,6 @@ import Heading from "../Heading.astro";
 
 const services = [
   {
-    // icon: (
-    //   <svg class="h-12 aspect-square fill-white"   viewBox="0 0 24 24" >
-    //     <path d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 14V5h16l.002 9H4z" />
-    //   </svg>
-    // ),
     title: "Full Stack Web Developer",
     desc: "I'm a Full-stack web developer who mainly focuses on performance and resource optimisation. I work with modern technologies like NextJS, Tailwind CSS, Tailwind CSS, and NodeJS."
   }
@@ -20,8 +15,7 @@ const services = [
     <Heading>What I do?</Heading>
     <div class="flex flex-wrap justify-between">
       {services.map(({  title, desc }) => (
-        <div  class="flex flex-col flex-1 max-w-sm gap-3 ">
-          {/*<div>{icon}</div> */}
+        <div class="flex flex-col flex-1 max-w-sm gap-3 ">
           <p class="text-2xl">{title}</p>
           <p>{desc}</p>
         </div>
