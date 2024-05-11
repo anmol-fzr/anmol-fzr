@@ -11,12 +11,19 @@ import { experiences } from "../../consts";
         <div class="flex flex-col ">
           <h2 class="text-3xl font-semibold">{name}</h2>
           <div class="flex flex-col justify-between w-full gap-2 pt-8 ">
-            {data.map(({ title, at = "", from = "", to = "" }) => (
+            {data.map(({ title, at = "", from = "", to = "" ,href }) => (
                 <div class={`flex flex-col gap-2 text-lg font-thin`}>
+                {href ? (
+                  <a href={href} class="text-lg font-medium underline underline-offset-4 decoration-secondary" target="_blank">
+                    {title} {at && "( " + at + " )"}{" "}
+                    {from && "( " + from + " - " + to + " )"}
+                  </a>
+                ) : (
                   <p class="text-lg font-medium">
                     {title} {at && "( " + at + " )"}{" "}
                     {from && "( " + from + " - " + to + " )"}
                   </p>
+                )}
                 </div>
             ))}
           </div>

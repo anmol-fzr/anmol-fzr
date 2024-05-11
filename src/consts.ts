@@ -57,6 +57,24 @@ const footLinks = [
     icon: "email",
   },
 ] as const;
+
+const osc = [
+  {
+    title: "chaynHQ/bloom-frontend",
+    href: "https://github.com/chaynhq/bloom-frontend",
+    from: "",
+    at: "",
+    to: "",
+  },
+  {
+    title: "Farzin-Firoozi/react-modern-drawer",
+    href: "https://github.com/Farzin-Firoozi/react-modern-drawer#:~:text=anmol%2Dfzr",
+    from: "",
+    at: "",
+    to: "",
+  },
+] as const;
+
 const internships = [
   {
     title: "Full Stack Web Developer",
@@ -107,6 +125,10 @@ const experiences = [
   {
     name: "Community",
     data: community,
+  },
+  {
+    name: "Open Source Contribution",
+    data: osc,
   },
   {
     name: "Internship",
