@@ -167,7 +167,7 @@ const linksArray = [
   },
   {
     target: "_blank",
-    to: "https://drive.google.com/file/d/1ENDeXHONWPD0z9mmTHa5bwHKzoixzyUj/view?usp=drive_link",
+    to: "https://drive.google.com/file/d/1va3LtmOXzEbGeko_BAcrtc4LGdp-s8Jh/view?usp=sharing",
     text: "Resume",
   },
 ] as const;
