@@ -2,6 +2,7 @@ import sviq from "./assets/sviq.webp";
 import vimaanvihar from "./assets/vimanvihaar.webp";
 import sviqAdmin from "./assets/sviq-admin.webp";
 
+const BUC = "Buildup Communication"
 const NAME = "Anmol";
 const SITE_TITLE = NAME + " | Expert Web Developer: Empowering Online Success";
 const SITE_DESCRIPTION =
@@ -78,49 +79,56 @@ const osc = [
 const internships = [
   {
     title: "Full Stack Web Developer",
-    from: "June 2023",
-    at: "",
-    to: "August 2023",
+    from: "September 2023",
+    at: BUC,
+    to: "November 2023",
+    href: "",
   },
   {
     title: "Full Stack Web Dev Intern",
     from: "June 2023",
-    at: "",
-    to: "November 2023",
+    at: BUC,
+    to: "August 2023",
+    href: ""
   },
 ] as const;
 const hackathons = [
   {
-    title: "SBSSU Samrt Hackathon",
-    at: "Feb 2023",
-    from: "",
+    title: `UDYAM: Soar to Shine`,
+    at: "",
+    from: "May 2023",
     desc: "",
     to: "",
+    href: "",
   },
   {
     title: "Codevista 2.0",
-    at: "March 2023",
-    from: "",
+    at: "",
+    from: "March 2023",
     desc: "",
     to: "",
+    href: "",
   },
   {
-    title: `UDYAM: Soar to Shine`,
-    at: "May 2023",
-    from: "",
+    title: "SBSSU Samrt Hackathon",
+    at: "",
+    from: "Feb 2023",
     desc: "",
     to: "",
+    href: "",
   },
 ] as const;
 const community = [
   {
-    title: "Web Development Lead @ GDSC SBSSU",
+    title: "Web Development Lead",
     from: "August 2023",
-    at: "",
+    at: "GDSC SBSSU",
     desc: "",
     to: "present",
+    href: "",
   },
 ] as const;
+
 const experiences = [
   {
     name: "Community",
