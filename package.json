@@ -11,10 +11,10 @@
     "preview": "astro preview --host"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.4",
-    "@astrojs/sitemap": "^3.1.2",
+    "@astrojs/check": "^0.6.0",
+    "@astrojs/sitemap": "^3.1.4",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.5.12",
+    "astro": "^4.8.3",
     "astro-icon": "^1.1.0",
     "astro-imagetools": "^0.9.0",
     "sharp": "^0.33.3",
@@ -22,9 +22,9 @@
     "typescript": "^5.4.3"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.12",
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.23",
-    "@tailwindcss/typography": "^0.5.12",
     "@vite-pwa/astro": "^0.2.0"
   }
 }
