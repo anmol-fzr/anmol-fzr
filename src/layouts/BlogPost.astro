@@ -31,7 +31,7 @@ const  t = pubDate.toString()
 			}
 		</div>
 		<div class="flex flex-col gap-4 my-2 mb-6">
-			<h2 transition:name={"desc"+t} class="text-2xl font-semibold mx-auto !w-fit text-center px-20 pt-4">
+			<h2 transition:name={"desc"+t} class="text-2xl font-semibold mx-auto !w-fit text-center md:px-20 pt-4">
 				{description}
 			</h2>
 			<div class="date mx-auto !w-fit q">
@@ -46,7 +46,7 @@ const  t = pubDate.toString()
 				}
 			</div>
 		</div>
-		<div class="prose !w-full mx-auto dark:prose-invert my-12">
+		<div class="prose !w-full lg:max-w-screen-lg mx-auto dark:prose-invert my-12 anmol lg:px-6">
 			<slot />
 		</div>
 	</article>
