@@ -2,6 +2,7 @@
 import type { HTMLAttributes } from "astro/types";
 interface Props extends HTMLAttributes<"a"> {
 	text: string;
+  mobile: boolean
 }
 const { href, text, target="_self",mobile } = Astro.props;
 ---
