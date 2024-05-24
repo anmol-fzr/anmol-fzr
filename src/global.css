@@ -20,21 +20,15 @@ body {
 ::selection {
   @apply bg-white/5 text-secondary;
 }
-.section {
-  @apply rounded-md  min-h-[calc(100vh_-_153px)];
-}
 a {
   @apply hover:text-secondary;
 }
 html {
   scroll-behavior: smooth;
 }
-.date {
-  @apply text-gray-600 dark:text-gray-300;
-}
-.input-styles {
-  @apply w-full p-3 px-6 text-white border rounded-md outline-none placeholder:normal-case focus:outline-none border-white/25 focus:border-white/75 bg-primary/75;
-}
+/* .input-styles { */
+/*   @apply w-full p-3 px-6 text-white border rounded-md outline-none placeholder:normal-case focus:outline-none border-white/25 focus:border-white/75 bg-primary/75; */
+/* } */
 
 ::-webkit-scrollbar {
   height: 4px;

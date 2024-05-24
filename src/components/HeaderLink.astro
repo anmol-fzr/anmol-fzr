@@ -6,9 +6,8 @@ interface Props extends HTMLAttributes<"a"> {
 }
 const { href, text, target="_self",mobile } = Astro.props;
 ---
-<li class={(!mobile? "hidden sm:block" : " mr-0  !w-fit p-0 ") +" capitalize "}  >
+<li class={(!mobile? "hidden sm:block" : " mr-0  !w-fit p-0 ") +" capitalize "}>
 	<a {...{ href,target }} aria-label={text} aria-labelledby={text}>
 		{text}
 	</a>
 </li>
-

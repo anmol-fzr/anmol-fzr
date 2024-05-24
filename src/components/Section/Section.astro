@@ -6,5 +6,11 @@ const { id } = Astro.props
 ---
 
 <section {...{ id }} class="flex w-full flex-col items-left mx-auto justify-center md:py-0 section">
-<slot>
+  <slot>
 </section>
+
+<style>
+  .section {
+    min-height: calc(100vh - 153px)
+  }
+</style>

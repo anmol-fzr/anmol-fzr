@@ -3,7 +3,7 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import CardBody from "./CardBody.astro"
 
 const sizes = {
-    lg:"w-full max-w-[900px] mx-auto",
+    lg:"w-full max-w-[800px] mx-auto",
     sm:"max-w-[600px] aspect-video mx-auto even:ml-0  odd:mr-0 "
 } as const
 
@@ -20,9 +20,9 @@ interface Props {
 const { slug,heroImage, pubDate,description, title ,size="sm" } = Astro.props;
 const t = pubDate.toString()
 ---
-<li class={`bg-white/[0.05] group hover:scale-[1.02] rounded-2xl ${sizes[size]}`} >
+<li class={`bg-white/[0.05] group hover:scale-[1.02] rounded-2xl  ${sizes[size]}`} >
     <a href={`/blog/${slug}/`} >
-      <img transition:name={"image"+t}  width="900" height="470" class="w-full bg-white/10 group-hover:rounded-xl group-hover:scale-[1.04] rounded-t-2xl" src={heroImage} alt={title} />
+      <img transition:name={"image"+t}  width="900" height="470" class="w-full bg-white/10 group-hover:rounded-3xl group-hover:scale-[1.04] rounded-t-2xl" src={heroImage} alt={title} />
     <CardBody>
         <h2  transition:name={"title"+t} class="text-lg md:text-2xl">{title}</h4>
         <p transition:name={"desc"+t} class="md:text-lg text-gray-100/90">{description}</p>
@@ -31,3 +31,8 @@ const t = pubDate.toString()
     </a>
 </li>
 
+<style>
+  .date {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+</style>
