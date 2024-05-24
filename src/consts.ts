@@ -170,35 +170,43 @@ const contactFields = [
     error: "Enter a valid Phone Number",
   },
 ] as const;
+
 const linksArray = [
   {
     to: "/blog",
     text: "Blogs",
+    mobile: true,
   },
   {
     to: "/#services",
     text: "What I Do ?",
+    mobile: false,
   },
   {
     to: "/#skills",
     text: "Skills",
+    mobile: false,
   },
   {
     to: "/#experience",
     text: "Experience",
+    mobile: false,
   },
   {
     to: "/#projects",
     text: "Projects",
+    mobile: false,
   },
   {
     to: "/#contact",
     text: "Contact",
+    mobile: false,
   },
   {
     target: "_blank",
     to: "https://drive.google.com/file/d/1va3LtmOXzEbGeko_BAcrtc4LGdp-s8Jh/view?usp=sharing",
     text: "Resume",
+    mobile: true,
   },
 ] as const;
 
