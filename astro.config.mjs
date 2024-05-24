@@ -11,4 +11,7 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: "viewport",
   },
+  experimental: {
+    contentCollectionCache: true
+  }
 });

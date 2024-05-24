@@ -1,12 +1,18 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import { BlogData } from "../content/config"
+import { getRelatedBlogs } from "../utils"
 import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "./layout.astro";
+import BlogCard from "../components/Blog/BlogCard.astro"
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = BlogData
 
-const { title,keywords, description, pubDate, updatedDate, heroImage,isPublished } = Astro.props;
-const  t = pubDate.toString()
+const { title,keywords, description, pubDate, updatedDate, heroImage,isPublished, related } = Astro.props;
+
+
+const relatedBlogs = await getRelatedBlogs(related)
+const haveRelatedBlogs = relatedBlogs?.length > 0
+const t = pubDate.toString()
 ---
 
 <Layout {...{ title,keywords, description, pubDate, updatedDate, heroImage, isPublished }}>
@@ -32,8 +38,7 @@ const  t = pubDate.toString()
 		</div>
 		<div class="flex flex-col gap-4 my-2 mb-6">
 			<h2 transition:name={"desc"+t} class="text-2xl font-semibold mx-auto !w-fit text-center md:px-20 pt-4">
-				{description}
-			</h2>
+				{description} </h2>
 			<div class="date mx-auto !w-fit q">
 				<FormattedDate tName={"date"+t}  date={pubDate} />
 				{
@@ -50,4 +55,8 @@ const  t = pubDate.toString()
 			<slot />
 		</div>
 	</article>
+{haveRelatedBlogs && (<h3 transition:name="related" class="text-3xl font-semibold mx-auto !w-fit text-center py-4">Related Blogs</h3>)}
+  <ul class="w-full max-w-[1200px] grid grid-cols-2 gap-24 px-24">
+    {haveRelatedBlogs && relatedBlogs?.map(({slug,data})=> <BlogCard {...data} size="xs" slug={slug} />)}
+  </ul>
 </Layout>
