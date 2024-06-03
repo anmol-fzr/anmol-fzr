@@ -7,12 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#181825",
-        // primary:"#090B0C",
-        secondary: "#cba6f7",
-        // secondary: "#84BCEB",
-        accent: "#502CDD",
-        text: "#fff",
+        primary: "var(--clr-primary)",
+        secondary: "var(--clr-secondary)",
+        accent: "var(--clr-accent)",
+        text: "var(--clr-text)",
       },
       keyframes: {
         "fade-out-down": {

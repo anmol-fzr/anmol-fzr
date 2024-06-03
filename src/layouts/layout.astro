@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ThemeRadio from "../components/Form/Radio/ThemeRadio.astro"
 import { ViewTransitions } from "astro:transitions";
 
 type Props = CollectionEntry<"blog">["data"];
@@ -16,11 +17,46 @@ const props = Astro.props;
 		<BaseHead {...props} image={props.heroImage} />
 		<ViewTransitions />
 	</head>
-	<body class="max-w-screen-xl bg-primary text-white mx-auto">
+	<body class="max-w-screen-xl bg-primary text-text mx-auto">
 		<Header/>
-		<main class="p-4">
+		<main class="p-4 text-text">
 			<slot>
 		</main>
+    <form class="color-picker z-[20] fixed bottom-4 right-4 lg:bottom-14 lg:right-14" action="">
+      <fieldset>
+
+        <legend class="sr-only">Pick a color scheme</legend>
+
+        <ThemeRadio id="latte" theme="light">Latte theme</ThemeRadio>
+        <ThemeRadio id="frappe">Frappe theme</ThemeRadio>
+        <ThemeRadio id="macchiato">Macchiato theme</ThemeRadio>
+        <ThemeRadio id="mocha">Mocha theme</ThemeRadio>
+
+
+      </fieldset>
+    </form>
 		<Footer />
 	</body>
+  <script>
+  const colorThemes = document.querySelectorAll('[name="theme"]');
+
+  const storeTheme = (theme) => localStorage.setItem("theme", theme);
+
+  const setTheme = () => {
+    const activeTheme = localStorage.getItem("theme");
+    colorThemes.forEach((themeOption) => {
+      themeOption.checked = themeOption.id === activeTheme;
+    });
+    document.documentElement.className = activeTheme;
+  };
+
+  colorThemes.forEach((themeOption) => {
+    themeOption.onclick =  () => {
+      storeTheme(themeOption.id);
+      document.documentElement.className = themeOption.dataset.theme;
+    };
+  })
+
+  document.onload = setTheme();
+</script>
 </html> 

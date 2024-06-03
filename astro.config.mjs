@@ -7,6 +7,9 @@ import AstroPWA from "@vite-pwa/astro";
 export default defineConfig({
   site: "https://anmol-fzr.web.app",
   integrations: [sitemap(), tailwind(), icon(), AstroPWA()],
+  devToolbar: {
+    enabled: false,
+  },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: "viewport",

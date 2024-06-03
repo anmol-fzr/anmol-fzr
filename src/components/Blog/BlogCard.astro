@@ -2,6 +2,7 @@
 import type { BlogData,Blog } from "../../content/config"
 import FormattedDate from "../../components/FormattedDate.astro";
 import CardBody from "./CardBody.astro"
+import { BlogData } from "../../content/config"
 
 const sizes = {
     lg:"w-full max-w-[900px] mx-auto",
@@ -11,7 +12,6 @@ const sizes = {
 
 type T = keyof typeof sizes;
 
-
 interface Props extends Pick<BlogData, "heroImage" | "description" | "pubDate" | "title">, Pick<Blog, "slug"> {
     size?: T; 
     horizontal?: boolean;
@@ -20,19 +20,13 @@ interface Props extends Pick<BlogData, "heroImage" | "description" | "pubDate" |
 const { slug,heroImage, pubDate,description, title ,size="sm",horizontal = false } = Astro.props;
 const t = pubDate.toString()
 ---
-<li class={`bg-white/[0.05] group hover:scale-[1.02] rounded-2xl  ${sizes[size]}`} >
-    <a href={`/blog/${slug}/`}  class={horizontal?"flex w-full":""}>
-      <img transition:name={"image"+t}  width="900" height="470" class={` ${horizontal ? "w-7/12 rounded-2xl" : "w-full rounded-t-2xl"}  bg-white/10 group-hover:rounded-3xl group-hover:scale-[1.04] `} src={heroImage} alt={title} />
+<li class={`bg-secondary/25 group hover:scale-[1.02] rounded-2xl  text-text ${sizes[size]}`} >
+    <a href={`/blog/${slug}/`}>
+      <img transition:name={"image"+t}  width="900" height="470" class={` w-full rounded-2xl bg-primary/10 group-hover:rounded-3xl group-hover:scale-[1.04] hover:-translate-y-2 `} src={heroImage} alt={title} />
     <CardBody>
         <h2  transition:name={"title"+t} class="text-lg md:text-2xl">{title}</h4>
-        <p transition:name={"desc"+t} class="md:text-lg text-gray-100/90">{description}</p>
-        <p class="date"><FormattedDate tName={"date"+t} date={pubDate} /></p>
+        <p transition:name={"desc"+t} class="md:text-lg text-text/10">{description}</p>
+        <p class="text-secondary"><FormattedDate tName={"date"+t} date={pubDate} /></p>
     </CardBody>
     </a>
 </li>
-
-<style>
-  .date {
-    @apply text-gray-600 dark:text-gray-300;
-  }
-</style>

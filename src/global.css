@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,6 +14,52 @@
 * {
   transition: all 0.2s ease-in-out;
 }
+
+/* primary - mantle */
+/* secondary - mauve */
+/* accent - rosewater */
+/* text - text */
+
+:root {
+  --latte-primary: #e6e9ef;
+  --frappe-primary: #292c3c;
+  --mocha-primary: #181825;
+  --macchiato-primary: #1e2030;
+
+  --clr-primary: var(--mocha-primary);
+  --clr-secondary: #cba6f7;
+  --clr-text: #cdd6f4;
+  --clr-accent: #f5e0dc;
+}
+
+:root:has(#latte:checked) {
+  --clr-primary: var(--latte-primary);
+  --clr-secondary: #8839ef;
+  --clr-accent: #502cdd;
+  --clr-text: #181825;
+}
+
+:root:has(#frappe:checked) {
+  --clr-primary: var(--frappe-primary);
+  --clr-secondary: #ca9ee6;
+  --clr-accent: #f2d5cf;
+  --clr-text: #c6d0f5;
+}
+
+:root:has(#macchiato:checked) {
+  --clr-primary: var(--macchiato-primary);
+  --clr-secondary: #c6a0f6;
+  --clr-accent: #f4dbd6;
+  --clr-text: #cad3f5;
+}
+
+:root:has(#mocha:checked) {
+  --clr-primary: var(--mocha-primary);
+  --clr-secondary: #cba6f7;
+  --clr-text: #cdd6f4;
+  --clr-accent: #f5e0dc;
+}
+
 body {
   @apply bg-primary text-text;
   font-family: "Rubik", sans-serif;
@@ -55,4 +102,41 @@ html {
 }
 ::-webkit-scrollbar-thumb:active {
   background-color: #fff;
+}
+
+.color-picker > fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: fit-content;
+  background: #b4befe;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  outline: 2px solid var(--radio-color, currentColor);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#latte {
+  --radio-color: var(--latte-primary);
+}
+.color-picker input[type="radio"]#frappe {
+  --radio-color: var(--frappe-primary);
+}
+.color-picker input[type="radio"]#macchiato {
+  --radio-color: var(--macchiato-primary);
+}
+.color-picker input[type="radio"]#mocha {
+  --radio-color: var(--mocha-primary);
 }

@@ -1,0 +1,12 @@
+---
+type Props = {
+  id: string
+  theme?: "light" | "dark"
+}
+const { id, theme = "dark" } = Astro.props;
+---
+
+<label for={id} class="sr-only">
+  <slot />
+</label>
+<input type="radio" data-theme={theme} id={id} name="theme">

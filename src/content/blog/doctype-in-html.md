@@ -2,6 +2,7 @@
 title: "Is this <!doctype html> an HTML element ?"
 description: "what does <!doctype html> represent in HTML ?"
 keywords: "web web-development simple easy pure-html html-only html doctype browser-internals deep dive into broswers"
+tags: ["html", "browser", "internal"]
 pubDate: "May 24 2024"
 isPublished: true
 heroImage: "/blog/doctype-in-html.webp"
