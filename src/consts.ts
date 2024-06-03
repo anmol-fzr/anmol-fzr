@@ -16,26 +16,35 @@ const skills = [
   { name: "CSS 3", icon: "css" },
   { name: "Javascript", icon: "js" },
   { name: "Typescript", icon: "ts" },
+  { name: "Astro", icon: "astro" },
   { name: "React JS", icon: "reactjs" },
   { name: "Next JS", icon: "nextjs" },
   { name: "Node JS", icon: "nodejs" },
   { name: "Mongo DB", icon: "mongodb" },
   { name: "Git", icon: "git" },
 ];
+
 const projects = [
   {
-    src: vimaanvihar,
-    alt: "vimaanvihar",
-  },
-  {
     src: sviq,
+    href: "https://supervisainsurancequote.ca/",
+    desc: `Build at ${BUC} as Full Stack Web Dev Intern`,
     alt: "supervisainsurancequote",
   },
   {
     src: sviqAdmin,
+    href: "https://admin.supervisainsurancequote.ca/",
+    desc: `Build at ${BUC} as Full Stack Web Dev Intern. Admin Panel for Super Visa Insurance Quote`,
     alt: "supervisainsurancequoteadmin",
   },
+  {
+    src: vimaanvihar,
+    href: "https://vimaanvihar.com/",
+    desc: "Made for risinginfra as a freelance project",
+    alt: "vimaanvihar",
+  }
 ] as const;
+
 const footLinks = [
   {
     href: "https://github.com/anmol-fzr/anmol-fzr",

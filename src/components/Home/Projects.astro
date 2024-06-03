@@ -9,13 +9,12 @@ import {projects} from "../../consts.ts"
   <div class="flex flex-col gap-16">
     <Heading>Projects</Heading>
     <div class="flex flex-wrap gap-6">
-      {
-        projects.map(({ src, alt }) => (
-          <div class="max-w-md p-2 border border-white ">
+      {projects.map(({ src, alt,desc,href }) => (
+          <a href={href} target="_blank" class="max-w-md p-2 border border-white group">
             <Image width={800} height={450} src={src} {...{ alt}}  />
-          </div>
-        ))
-      }
+            <p class="opacity-0 group-hover:opacity-100 mt-2">{desc}</p>
+          </a>
+      ))}
     </div>
   </div>
 </Section>
