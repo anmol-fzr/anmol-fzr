@@ -1,5 +1,5 @@
 ---
-import { BlogData } from "../content/config"
+import type { BlogData } from "../content/config"
 import { getRelatedBlogs } from "../utils"
 import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "./layout.astro";
@@ -11,7 +11,7 @@ const { title,keywords, description, pubDate, updatedDate, heroImage,isPublished
 
 
 const relatedBlogs = await getRelatedBlogs(related)
-const haveRelatedBlogs = relatedBlogs?.length > 0
+const haveRelatedBlogs = (relatedBlogs && relatedBlogs?.length > 0 ) ?? false
 const t = pubDate.toString()
 ---
 

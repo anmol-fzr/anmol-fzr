@@ -1,4 +1,5 @@
 ---
+import type { BlogData,Blog } from "../../content/config"
 import FormattedDate from "../../components/FormattedDate.astro";
 import CardBody from "./CardBody.astro"
 
@@ -10,15 +11,12 @@ const sizes = {
 
 type T = keyof typeof sizes;
 
-interface Props {
-    slug: string;
+
+interface Props extends Pick<BlogData, "heroImage" | "description" | "pubDate" | "title">, Pick<Blog, "slug"> {
     size?: T; 
     horizontal?: boolean;
-    heroImage: any;
-    description:string;
-    pubDate: Date;
-    title: string;
 }
+
 const { slug,heroImage, pubDate,description, title ,size="sm",horizontal = false } = Astro.props;
 const t = pubDate.toString()
 ---
