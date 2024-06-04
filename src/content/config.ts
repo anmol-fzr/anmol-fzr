@@ -1,28 +1,26 @@
-import { defineCollection, z, reference } from "astro:content";
+import { defineCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import { blogSchema, experienceSchema, projectSchema } from "../schema";
 
-const blogSchema = z.object({
-  title: z.string(),
-  tags: z.array(z.string()).optional(),
-  description: z.string(),
-  keywords: z.string(),
-  pubDate: z.coerce.date(),
-  isPublished: z.boolean(),
-  updatedDate: z.coerce.date().optional(),
-  heroImage: z.string(),
-  related: z.array(reference('blog')).optional()
+const experience = defineCollection({
+  type: "data",
+  schema: experienceSchema,
+})
+
+const project = defineCollection({
+  type: "data",
+  schema: projectSchema
 });
-
-type Blog = CollectionEntry<"blog">
-type BlogData = Blog["data"]
 
 const blog = defineCollection({
   type: "content",
   schema: blogSchema
 });
 
+const collections = { blog, experience, project };
 
-const collections = { blog };
+type Blog = CollectionEntry<"blog">
+type BlogData = Blog["data"]
 
 export { collections }
 export type { Blog, BlogData }

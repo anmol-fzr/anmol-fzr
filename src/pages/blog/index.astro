@@ -17,7 +17,7 @@ const allPosts = await getAllPublishedBlogs()
 		<ul class="flex flex-wrap gap-8">
 			{allPosts.map(({ slug, data: { heroImage, title, pubDate, description, tags, keywords } },i) => (
 					<BlogCard size={i === 0 ? "lg": "sm"}
-						{...({ heroImage, title, pubDate, slug ,description, keywords })}
+						{...({ heroImage, title, pubDate, slug ,description, keywords,tags })}
 					/>
 				))}
 		</ul>

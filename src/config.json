@@ -1,0 +1,68 @@
+{
+"skills":[
+  {
+    "name": "HTML 5",
+    "icon": "html"
+  },
+  {
+    "name": "CSS 3",
+    "icon": "css"
+  },
+  {
+    "name": "Javascript",
+    "icon": "js"
+  },
+  {
+    "name": "Typescript",
+    "icon": "ts"
+  },
+  {
+    "name": "Astro",
+    "icon": "astro"
+  },
+  {
+    "name": "React JS",
+    "icon": "reactjs"
+  },
+  {
+    "name": "Next JS",
+    "icon": "nextjs"
+  },
+  {
+    "name": "Node JS",
+    "icon": "nodejs"
+  },
+  {
+    "name": "Mongo DB",
+    "icon": "mongodb"
+  },
+  {
+    "name": "Git",
+    "icon": "git"
+  }
+],
+"links":[
+  {
+    "href": "https://github.com/anmol-fzr/anmol-fzr",
+    "text": "github",
+    "icon": "github"
+  },
+  {
+    "href": "https://linkedin.com/in/anmol-fzr",
+    "text": "linkedin",
+    "icon": "linkedin"
+  },
+  {
+    "href": "https://codepen.io/the-anmol",
+    "text": "codepen",
+    "icon": "codepen"
+  },
+  {
+    "href": "mailto:anmoljan2005@gmail.com",
+    "text": "email",
+    "icon": "email"
+  }
+],
+"email": "anmoljan2005@gmail.com",
+"resume": "https://drive.google.com/file/d/1va3LtmOXzEbGeko_BAcrtc4LGdp-s8Jh/view?usp=sharing"
+}

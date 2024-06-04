@@ -1,0 +1,60 @@
+---
+import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
+---
+
+<form class="color-picker z-[20] fixed bottom-4 right-4 lg:bottom-14 lg:right-14" action="">
+  <fieldset>
+    <legend class="sr-only">Pick a color scheme</legend>
+    <ThemeRadio id="latte" theme="light">Latte theme</ThemeRadio>
+    <ThemeRadio id="frappe">Frappe theme</ThemeRadio>
+    <ThemeRadio id="macchiato">Macchiato theme</ThemeRadio>
+    <ThemeRadio id="mocha">Mocha theme</ThemeRadio>
+  </fieldset>
+</form>
+
+    <script>
+    const colorThemes = document.querySelectorAll('[name="theme"]');
+
+    // (function (){
+    //   colorThemes.forEach((ops)=>{
+    //     if (ops.checked) {
+    //       localStorage.setItem("theme", ops.id)
+    //       localStorage.setItem("flavor",ops.dataset.theme)
+    //     }
+    //   })
+    //   const theme = localStorage.getItem("theme")
+    //   const flavor = localStorage.getItem("flavor")
+    //   console.log(theme,flavor)
+    //
+    //   if (!theme || !flavor) {
+    //     console.log("no Theme or flavor",!theme,!flavor)
+    //     localStorage.setItem("theme","dark")
+    //     localStorage.setItem("flavor","mocha")
+    //   }
+    // })()
+
+
+    const storeTheme = (flavor:string,theme: "light"|"dark") => {
+      localStorage.setItem("flavor", flavor);
+      localStorage.setItem("theme", theme);
+    }
+
+    const setTheme = () => {
+      const activeTheme = localStorage.getItem("theme") ?? "dark";
+      colorThemes.forEach((themeOption: any) => {
+        themeOption.checked = themeOption.id === activeTheme;
+      });
+      document.documentElement.className = activeTheme;
+    };
+
+    colorThemes.forEach((themeOption: any) => {
+      themeOption.onclick =  () => {
+        const flavor = themeOption.id
+        const theme = themeOption.dataset.theme
+        storeTheme(flavor,theme);
+        document.documentElement.className = theme
+      };
+    })
+
+    document.onload = (setTheme() as any)
+  </script>

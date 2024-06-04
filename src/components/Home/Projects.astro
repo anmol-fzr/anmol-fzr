@@ -2,16 +2,18 @@
 import Section from "../Section/Section.astro";
 import Heading from "../Heading.astro";
 import {Image } from "astro:assets"
-import {projects} from "../../consts.ts"
+import { getCollection } from "astro:content"
+
+const projects = await getCollection("projects")
 ---
 
 <Section id="projects">
   <div class="flex flex-col gap-16">
     <Heading>Projects</Heading>
     <div class="flex flex-wrap gap-6">
-      {projects.map(({ src, alt,desc,href }) => (
+      {projects.map(( { data:{ image, alt, desc, href } }) => (
           <a href={href} target="_blank" class="max-w-md p-2 border border-text group">
-            <Image width={800} height={450} src={src} {...{ alt}}  />
+            <Image width={800} height={450} src={image} alt={alt}  />
             <p class="opacity-0 group-hover:opacity-100 mt-2">{desc}</p>
           </a>
       ))}

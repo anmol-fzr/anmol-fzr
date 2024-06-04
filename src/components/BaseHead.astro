@@ -1,5 +1,5 @@
 ---
-import { SITE_DESCRIPTION, SITE_TITLE, SITE_KEYWORD } from "../consts";
+import { META } from "../config.ts"
 import "../global.css";
 
 interface Props {
@@ -8,13 +8,21 @@ interface Props {
 	keywords?: string;
 	image?: string;
 }
+const {
+  TITLE,
+  DESCRIPTION,
+  KEYWORD,
+  IMAGE,
+  GOOGLE_SITE_VERIFICATION
+} = META 
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
 const {
-	title = SITE_TITLE,
-	description = SITE_DESCRIPTION,
-	keywords = SITE_KEYWORD,
-	image = "/main.webp",
+	title = TITLE,
+	description = DESCRIPTION,
+	keywords = KEYWORD,
+	image = IMAGE,
 } = Astro.props;
 
 ---
@@ -24,7 +32,7 @@ const {
 <meta name="theme-color" content="#181825" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<meta name="google-site-verification" content="M7cRQ7-GP19WVgwgB811IV0CgWuSRW83k0L_gIcQy4I" />
+<meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
 <link rel="manifest" href="/manifest.json" />
 <link rel="canonical" href={canonicalURL} />
 

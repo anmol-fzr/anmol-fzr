@@ -1,12 +1,12 @@
 ---
-type Props = {
-  id: string
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'input'> {
   theme?: "light" | "dark"
 }
-const { id, theme = "dark" } = Astro.props;
+
+const { id, theme = "dark", ...props } = Astro.props
 ---
 
-<label for={id} class="sr-only">
-  <slot />
-</label>
-<input type="radio" data-theme={theme} id={id} name="theme">
+<label for={id} class="sr-only"><slot /></label>
+<input data-theme={theme} {...props} id={id} type="radio" name="theme" class="cursor-pointer">

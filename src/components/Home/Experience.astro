@@ -1,12 +1,17 @@
 ---
 import Section from "../Section/Section.astro";
 import Heading from "../Heading.astro";
-import { experiences } from "../../consts";
+import { getCollection } from "astro:content"
+
+const c = await getCollection("experience")
+const records = c[0]
+const experiences = records.data.content
+const title  = records.collection
 ---
 
 <Section id="experience">
   <div class="flex flex-col gap-16">
-    <Heading>Experience</Heading>
+    <Heading>{title}</Heading>
     {experiences.map(({ name, data }) => (
         <div class="flex flex-col ">
           <h2 class="text-3xl font-semibold">{name}</h2>
@@ -14,7 +19,7 @@ import { experiences } from "../../consts";
             {data.map(({ title, at = "", from = "", to = "" ,href }) => (
                 <div class={`flex flex-col gap-2 text-lg font-thin`}>
                 {href ? (
-                  <a href={href} class="text-lg font-medium underline underline-offset-4 decoration-secondary" target="_blank">
+                  <a href={href} class="text-lg font-medium w-fit underline underline-offset-4 decoration-secondary" target="_blank">
                     {title} {at && ("@ " + at) }{" "}
                     {from && "( " + from + " - " + to + " )"}
                   </a>

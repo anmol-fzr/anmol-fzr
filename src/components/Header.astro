@@ -1,11 +1,13 @@
 ---
 import Links from "./Navbar/Links.astro"
-import { NAME } from "../consts";
+import { NAME } from "../config.ts";
 ---
 
-<header class="w-full h-[7.5vh] items-center sticky top-0 backdrop-blur-sm bg-gradient-to-t from-transparent via-primary/50 to-primary z-10 flex justify-between text-text " >
-  <a href="/" class="px-4 text-xl w-fit">
-    {NAME}
-  </a>
+<header class="w-full h-[7.5vh] sticky top-0 backdrop-blur-sm bg-gradient-to-t from-transparent via-black/10 to-black/25 z-10" >
+  <nav class="max-w-screen-xl flex items-center justify-between w-full mx-auto h-full text-text">
+    <a href="/" class="px-4 text-xl w-fit">
+      {NAME}
+    </a>
   <Links />
+  </nav>
 </header>

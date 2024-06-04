@@ -1,8 +1,7 @@
 ---
-import type { BlogData,Blog } from "../../content/config"
+import type { BlogData, Blog } from "../../content/config"
 import FormattedDate from "../../components/FormattedDate.astro";
 import CardBody from "./CardBody.astro"
-import { BlogData } from "../../content/config"
 
 const sizes = {
     lg:"w-full max-w-[900px] mx-auto",
@@ -12,12 +11,11 @@ const sizes = {
 
 type T = keyof typeof sizes;
 
-interface Props extends Pick<BlogData, "heroImage" | "description" | "pubDate" | "title">, Pick<Blog, "slug"> {
+interface Props extends Pick<BlogData, "heroImage" | "description" | "pubDate" | "title"|"tags">, Pick<Blog, "slug"> {
     size?: T; 
-    horizontal?: boolean;
 }
 
-const { slug,heroImage, pubDate,description, title ,size="sm",horizontal = false } = Astro.props;
+const { slug,heroImage, pubDate,description, title ,size="sm" } = Astro.props;
 const t = pubDate.toString()
 ---
 <li class={`bg-secondary/25 group hover:scale-[1.02] rounded-2xl  text-text ${sizes[size]}`} >
