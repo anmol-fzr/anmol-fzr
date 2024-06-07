@@ -14,26 +14,6 @@ import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
 
     <script>
     const colorThemes = document.querySelectorAll('[name="theme"]');
-
-    // (function (){
-    //   colorThemes.forEach((ops)=>{
-    //     if (ops.checked) {
-    //       localStorage.setItem("theme", ops.id)
-    //       localStorage.setItem("flavor",ops.dataset.theme)
-    //     }
-    //   })
-    //   const theme = localStorage.getItem("theme")
-    //   const flavor = localStorage.getItem("flavor")
-    //   console.log(theme,flavor)
-    //
-    //   if (!theme || !flavor) {
-    //     console.log("no Theme or flavor",!theme,!flavor)
-    //     localStorage.setItem("theme","dark")
-    //     localStorage.setItem("flavor","mocha")
-    //   }
-    // })()
-
-
     const storeTheme = (flavor:string,theme: "light"|"dark") => {
       localStorage.setItem("flavor", flavor);
       localStorage.setItem("theme", theme);
