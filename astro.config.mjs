@@ -5,7 +5,7 @@ import icon from "astro-icon";
 import AstroPWA from "@vite-pwa/astro";
 
 export default defineConfig({
-  site: "https://anmol-fzr.web.app",
+  site: "https://withanmol.com",
   integrations: [sitemap(), tailwind(), icon(), AstroPWA()],
   devToolbar: {
     enabled: false,

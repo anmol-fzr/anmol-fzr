@@ -26,10 +26,10 @@
   --mocha-primary: #181825;
   --macchiato-primary: #1e2030;
 
-  /* --clr-primary: var(--mocha-primary); */
-  /* --clr-secondary: #cba6f7; */
-  /* --clr-text: #cdd6f4; */
-  /* --clr-accent: #f5e0dc; */
+  --clr-primary: var(--latte-primary);
+  --clr-secondary: #8839ef;
+  --clr-accent: #502cdd;
+  --clr-text: #181825;
 }
 
 :root:has(#latte:checked) {
