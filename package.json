@@ -7,7 +7,7 @@
     "clean": "rm -rf dist/",
     "build": "npm run clean && astro check && astro build && cp ./robots.txt ./public/ ",
     "deploy": "bun run build && firebase deploy && bun run open",
-    "open": "xdg-open 'https://anmol-fzr.web.app'",
+    "open": "xdg-open 'https://withanmol.com'",
     "preview": "astro preview --host"
   },
   "dependencies": {

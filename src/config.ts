@@ -14,7 +14,7 @@ Discover how we can bring your online presence to life. Contact us for a consult
 web developer, frontend developer, software developer, UI/UX developer, responsive web design, web development services,web engineer,full stack 
 javascript developer,mern stack developer,certified javscript developer`,
   IMAGE: `/main.webp`,
-  GOOGLE_SITE_VERIFICATION: "M7cRQ7-GP19WVgwgB811IV0CgWuSRW83k0L_gIcQy4I"
+  GOOGLE_SITE_VERIFICATION: "HziuWubW8xm3rCiQYFmw68QweNGkemSE69e3QOXJEco"
 } as const
 
 export { META, NAME, JOB_TITLE, EMAIL }
