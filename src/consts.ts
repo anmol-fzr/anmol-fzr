@@ -44,13 +44,13 @@ const linksArray = [
     mobile: false,
   },
   {
-    to: "/#experience",
-    text: "Experience",
+    to: "/#projects",
+    text: "Projects",
     mobile: false,
   },
   {
-    to: "/#projects",
-    text: "Projects",
+    to: "/#experience",
+    text: "Experience",
     mobile: false,
   },
   {
