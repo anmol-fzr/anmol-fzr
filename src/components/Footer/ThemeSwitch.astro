@@ -14,7 +14,8 @@ import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
 
     <script>
     const colorThemes = document.querySelectorAll('[name="theme"]');
-    const storeTheme = (flavor:string,theme: "light"|"dark") => {
+
+    const storeTheme = (flavor: string, theme: "light" | "dark") => {
       localStorage.setItem("flavor", flavor);
       localStorage.setItem("theme", theme);
     }
@@ -30,7 +31,7 @@ import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
     colorThemes.forEach((themeOption: any) => {
       themeOption.onclick =  () => {
         const flavor = themeOption.id
-        const theme = themeOption.dataset.theme
+        const theme = themeOption.dataset.theme ?? "dark"
         storeTheme(flavor,theme);
         document.documentElement.className = theme
       };

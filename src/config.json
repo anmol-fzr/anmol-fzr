@@ -43,17 +43,17 @@
 ],
 "links":[
   {
-    "href": "https://github.withanmol.com",
+    "href": "https://github.com/anmol-fzr",
     "text": "github",
     "icon": "github"
   },
   {
-    "href": "https://linkedin.withanmol.com",
+    "href": "https://linkedin.com/in/anmol-fzr",
     "text": "linkedin",
     "icon": "linkedin"
   },
   {
-    "href": "https://codepen.withanmol.com",
+    "href": "https://codepen.io/the-anmol",
     "text": "codepen",
     "icon": "codepen"
   },
@@ -64,5 +64,5 @@
   }
 ],
 "email": "anmoljan2005@gmail.com",
-"resume": "resume.withanmol.com"
+"resume": "https://resume.withanmol.com"
 }
