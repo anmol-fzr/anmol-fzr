@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/layout.astro";
+import BlogCard from "../../components/Blog/BlogCard.astro";
+import BlogTitle from "../../components/Typo/BlogTitle.astro";
+import { getAllDocs } from "../../utils"
+
+const allPosts = await getAllDocs()
+---
+
+<Layout {...{} as any} >
+	<section class="min-h-[80vh]" >
+		<div class="flex flex-col gap-4 my-2 mb-6"> 
+			<BlogTitle>
+				Docs
+			</BlogTitle>
+		</div>
+		<ul class="flex flex-wrap gap-8">
+			{allPosts.map(({ slug, data: { heroImage, title, pubDate, description, tags, keywords } },i) => (
+					<BlogCard size={i === 0 ? "lg": "sm"}
+				slugPrefix="docs"
+						{...({ heroImage, title, pubDate, slug ,description, keywords,tags })}
+					/>
+				))}
+		</ul>
+    <!-- <Pagination perPage={blogPerPage} total={totalPosts} /> -->
+	</section>
+</Layout>

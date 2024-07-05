@@ -12,19 +12,21 @@ const sizes = {
 type T = keyof typeof sizes;
 
 interface Props extends Pick<BlogData, "heroImage" | "description" | "pubDate" | "title"|"tags">, Pick<Blog, "slug"> {
+slugPrefix: "blog" | "docs"
     size?: T; 
 }
 
-const { slug,heroImage, pubDate,description, title ,size="sm" } = Astro.props;
-const t = pubDate.toString()
+const { slug,heroImage, pubDate ,description, title ,size="sm",slugPrefix } = Astro.props;
+const t = pubDate?.toString() ?? ""
+console.log(t)
 ---
 <li class={`bg-secondary/25 group hover:scale-[1.02] rounded-2xl  text-text ${sizes[size]}`} >
-    <a href={`/blog/${slug}/`}>
+	<a href={`/${slugPrefix}/${slug}/`}>
       <img transition:name={"image"+t}  width="900" height="470" class={` w-full rounded-2xl bg-primary/10 group-hover:rounded-3xl group-hover:scale-[1.04] hover:-translate-y-2 `} src={heroImage} alt={title} />
     <CardBody>
         <h2  transition:name={"title"+t} class="text-lg md:text-2xl">{title}</h4>
         <p transition:name={"desc"+t} class="md:text-lg text-text/10">{description}</p>
-        <p class="text-secondary"><FormattedDate tName={"date"+t} date={pubDate} /></p>
+		{t && ( <p class="text-secondary"><FormattedDate tName={"date"+t} date={pubDate} /></p>)}
     </CardBody>
     </a>
 </li>

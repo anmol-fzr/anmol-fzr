@@ -1,0 +1,22 @@
+---
+import { getAllDocs } from "../../utils"
+import BlogPost from '../../layouts/BlogPost.astro';
+import type { Blog } from "../../content/config"
+
+export async function getStaticPaths() {
+	const docs = await getAllDocs()
+	return docs.map((doc) => ({
+		params: { slug: doc.slug },
+		props: doc,
+	}));
+}
+
+type Props = Blog
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<BlogPost {...post.data}>
+	<Content />
+</BlogPost>

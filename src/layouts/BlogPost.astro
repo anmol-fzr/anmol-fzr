@@ -7,12 +7,11 @@ import BlogCard from "../components/Blog/BlogCard.astro"
 
 type Props = BlogData
 
-const { title,keywords, description, pubDate, updatedDate, heroImage,isPublished, related } = Astro.props;
-
+const { title,keywords, description, pubDate = "", updatedDate, heroImage,isPublished, related } = Astro.props;
 
 const relatedBlogs = await getRelatedBlogs(related)
 const haveRelatedBlogs = (relatedBlogs && relatedBlogs?.length > 0 ) ?? false
-const t = pubDate.toString()
+const t = pubDate?.toString()
 ---
 
 <Layout {...{ title,keywords, description, pubDate, updatedDate, heroImage, isPublished }}>
@@ -24,30 +23,30 @@ const t = pubDate.toString()
 		</div>
 		<div class="hero-image">
 			{
-				heroImage && (
+			heroImage && (
 					<img
-						transition:name={"image"+t}
-						width={1020}
-						height={510}
-						class="w-full md:w-10/12 mx-auto rounded-2xl "
-						src={heroImage}
-						alt={title}
-					/>
-				)
+				transition:name={"image"+t}
+				width={1020}
+				height={510}
+				class="w-full md:w-10/12 mx-auto rounded-2xl "
+				src={heroImage}
+				alt={title}
+			/>
+			)
 			}
 		</div>
 		<div class="flex flex-col gap-4 my-2 mb-6">
 			<h2 transition:name={"desc"+t} class="text-2xl font-semibold mx-auto !w-fit text-center md:px-20 pt-4">
-				{description} </h2>
+			{description} </h2>
 			<div class="date mx-auto !w-fit q">
-				<FormattedDate tName={"date"+t}  date={pubDate} />
+			{t && ( <FormattedDate tName={"date"+t}  date={pubDate} />)}
 				{
-					updatedDate && (
+				updatedDate && (
 						<div class="last-updated-on">
-							Last updated on{" "}
-							<FormattedDate date={updatedDate} />
-						</div>
-					)
+					Last updated on{" "}
+				<FormattedDate date={updatedDate} />
+				</div>
+				)
 				}
 			</div>
 		</div>
@@ -55,8 +54,8 @@ const t = pubDate.toString()
 			<slot />
 		</div>
 	</article>
-{haveRelatedBlogs && (<h3 transition:name="related" class="text-3xl font-semibold mx-auto !w-fit text-center py-4">Related Blogs</h3>)}
-  <ul class="w-full max-w-[1200px] flex flex-col md:flex-row flex-grow gap-20 md:gap-24 md:px-24">
-    {haveRelatedBlogs && relatedBlogs?.map(({slug,data})=> <BlogCard {...data} size="xs" slug={slug} />)}
-  </ul>
+	{haveRelatedBlogs && (<h3 transition:name="related" class="text-3xl font-semibold mx-auto !w-fit text-center py-4">Related Blogs</h3>)}
+	<ul class="w-full max-w-[1200px] flex flex-col md:flex-row flex-grow gap-20 md:gap-24 md:px-24">
+		{haveRelatedBlogs && relatedBlogs?.map(({slug,data})=> <BlogCard {...data} size="xs" slug={slug} />)}
+	</ul>
 </Layout>

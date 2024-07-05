@@ -3,6 +3,11 @@ import type { Blog, BlogData } from "./content/config"
 
 const sortBlogByDate = (blogs: Blog[]) => blogs.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+const getAllDocs = async () => {
+  const allDocs = await getCollection("docs")
+  return allDocs
+}
+
 const getAllPublishedBlogs = async () => {
   const allPosts = await getCollection("blog", ({ data }) => data.isPublished === true)
   return sortBlogByDate(allPosts)
@@ -25,4 +30,4 @@ const getRelatedBlogs = async (related: BlogData["related"]) => {
   return publishedRelatedBlogs
 }
 
-export { getAllPublishedBlogs, getBlogBySlug, getRelatedBlogs }
+export { getAllPublishedBlogs, getBlogBySlug, getRelatedBlogs, getAllDocs }
