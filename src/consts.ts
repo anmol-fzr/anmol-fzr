@@ -29,6 +29,11 @@ const contactFields = [
 
 const linksArray = [
   {
+    to: "/docs",
+    text: "Docs",
+    mobile: true,
+  },
+  {
     to: "/blog",
     text: "Blogs",
     mobile: true,
