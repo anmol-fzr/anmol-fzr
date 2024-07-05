@@ -7,11 +7,11 @@ import BlogCard from "../components/Blog/BlogCard.astro"
 
 type Props = BlogData
 
-const { title,keywords, description, pubDate = "", updatedDate, heroImage,isPublished, related } = Astro.props;
+const { title,keywords, description, pubDate, updatedDate, heroImage,isPublished, related } = Astro.props;
 
 const relatedBlogs = await getRelatedBlogs(related)
 const haveRelatedBlogs = (relatedBlogs && relatedBlogs?.length > 0 ) ?? false
-const t = pubDate?.toString()
+const t = pubDate?.toString() ?? ""
 ---
 
 <Layout {...{ title,keywords, description, pubDate, updatedDate, heroImage, isPublished }}>

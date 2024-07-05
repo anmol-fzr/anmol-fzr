@@ -22,5 +22,9 @@ const collections = { blog, experience, project };
 type Blog = CollectionEntry<"blog">
 type BlogData = Blog["data"]
 
+type Doc = CollectionEntry<"docs">
+type DocData = Doc["data"]
+
 export { collections }
 export type { Blog, BlogData }
+export type { Doc, DocData }

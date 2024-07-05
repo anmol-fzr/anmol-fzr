@@ -6,7 +6,9 @@ import Footer from "../components/Footer.astro";
 import ThemeSwitch from "../components/Footer/ThemeSwitch.astro";
 import { ViewTransitions } from "astro:transitions";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+	pubDate: string | Date
+}
 
 const props = Astro.props;
 ---

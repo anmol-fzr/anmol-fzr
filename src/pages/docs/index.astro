@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/layout.astro";
-import BlogCard from "../../components/Blog/BlogCard.astro";
+import DocsCard from "../../components/Docs/DocsCard.astro"
 import BlogTitle from "../../components/Typo/BlogTitle.astro";
 import { getAllDocs } from "../../utils"
 
@@ -15,13 +15,11 @@ const allPosts = await getAllDocs()
 			</BlogTitle>
 		</div>
 		<ul class="flex flex-wrap gap-8">
-			{allPosts.map(({ slug, data: { heroImage, title, pubDate, description, tags, keywords } },i) => (
-					<BlogCard size={i === 0 ? "lg": "sm"}
-				slugPrefix="docs"
-						{...({ heroImage, title, pubDate, slug ,description, keywords,tags })}
+			{allPosts.map(({ slug, data: { heroImage, title, description, keywords } },i) => (
+					<DocsCard size={i === 0 ? "lg": "sm"}
+						{...({ heroImage, title, slug ,description, keywords})}
 					/>
 				))}
 		</ul>
-    <!-- <Pagination perPage={blogPerPage} total={totalPosts} /> -->
 	</section>
 </Layout>
