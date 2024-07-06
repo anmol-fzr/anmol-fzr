@@ -5,10 +5,10 @@ import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
 <form class="color-picker z-[20] fixed bottom-4 right-4 lg:bottom-14 lg:right-14" action="">
   <fieldset>
     <legend class="sr-only">Pick a color scheme</legend>
-    <ThemeRadio checked id="latte" theme="light">Latte theme</ThemeRadio>
+    <ThemeRadio id="latte" theme="light">Latte theme</ThemeRadio>
     <ThemeRadio id="frappe">Frappe theme</ThemeRadio>
     <ThemeRadio id="macchiato">Macchiato theme</ThemeRadio>
-    <ThemeRadio id="mocha">Mocha theme</ThemeRadio>
+    <ThemeRadio checked id="mocha">Mocha theme</ThemeRadio>
   </fieldset>
 </form>
 
@@ -21,7 +21,7 @@ import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
     }
 
     const setTheme = () => {
-      const activeTheme = localStorage.getItem("theme") ?? "light";
+      const activeTheme = localStorage.getItem("theme") ?? "dark";
       colorThemes.forEach((themeOption: any) => {
         themeOption.checked = themeOption.id === activeTheme;
       });
@@ -30,12 +30,14 @@ import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
 
     colorThemes.forEach((themeOption: any) => {
       themeOption.onclick =  () => {
-        const flavor = themeOption.id
+        const flavor = themeOption.id ?? "mocha"
         const theme = themeOption.dataset.theme ?? "dark"
         storeTheme(flavor,theme);
         document.documentElement.className = theme
       };
     })
+
+    document.onload = setTheme
 
     document.onload = (setTheme() as any)
   </script>

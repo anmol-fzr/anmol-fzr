@@ -1,5 +1,8 @@
+import Fluid from "tailwindcss-fluid-type";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  jit: true,
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,svg}",
     "./public/**/*.svg",
@@ -75,6 +78,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
-  darkMode: "class"
+  plugins: [Fluid, require("@tailwindcss/typography")],
+  darkMode: "class",
 };

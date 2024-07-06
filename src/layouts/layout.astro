@@ -14,17 +14,26 @@ const props = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
 	<head>
 		<BaseHead {...props} image={props.heroImage} />
 		<ViewTransitions />
 	</head>
 	<body class="bg-primary text-text">
 		<Header/>
-		<main class="p-4 text-text max-w-screen-xl mx-auto">
+		<main class="p-4 text-text theme-screen-w">
 			<slot>
 		</main>
 		<Footer />
     <ThemeSwitch />
 	</body>
+	<script>
+	if (!localStorage.getItem("theme")) {
+		localStorage.setItem("theme", "dark")
+	}
+	if (!localStorage.getItem("flavor")) {
+		localStorage.setItem("flavor", "mocha")
+	}
+	</script>
+
 </html> 

@@ -6,7 +6,7 @@ import AstroPWA from "@vite-pwa/astro";
 
 export default defineConfig({
   site: "https://withanmol.com",
-  integrations: [sitemap(), tailwind(), icon(), AstroPWA()],
+  integrations: [sitemap(), tailwind({}), icon(), AstroPWA()],
   devToolbar: {
     enabled: false,
   },
@@ -15,6 +15,6 @@ export default defineConfig({
     defaultStrategy: "viewport",
   },
   experimental: {
-    contentCollectionCache: true
-  }
+    contentCollectionCache: true,
+  },
 });
