@@ -1,13 +1,20 @@
 ---
-import Links from "./Navbar/Links.astro"
+import Links from "./Navbar/Links.astro";
 import { NAME } from "../config.ts";
 ---
 
-<header class="nav-container h-[7.5vh] top-0 bg-gradient-to-t from-transparent via-black/25 to-black/50  border-b " >
-<nav class="flex items-center justify-between theme-screen-w mx-auto h-full text-text">
+<header class="nav-container py-4 top-0 border-b bg-white/25 dark:bg-black/25">
+  <nav
+    class="flex items-center justify-between theme-screen-w mx-auto h-full text-text"
+  >
     <a href="/" class="px-4 text-xl w-fit">
       {NAME}
     </a>
-  <Links />
+    <Links />
   </nav>
+  <!-- 
+  <div class="fixed top-24 right-24">
+    <Icon name="eyes" size={64} />
+  </div>
+  -->
 </header>

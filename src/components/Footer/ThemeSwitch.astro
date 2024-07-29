@@ -1,8 +1,12 @@
 ---
-import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
+import ThemeRadio from "../Form/Radio/ThemeRadio.astro";
 ---
 
-<form class="color-picker z-[20] fixed bottom-4 right-4 lg:bottom-14 lg:right-14" action="">
+<form
+  class="color-picker z-[20] fixed bottom-4 right-4 lg:bottom-14 lg:right-14"
+  action=""
+  id="form"
+>
   <fieldset>
     <legend class="sr-only">Pick a color scheme</legend>
     <ThemeRadio id="latte" theme="light">Latte theme</ThemeRadio>
@@ -12,32 +16,37 @@ import ThemeRadio from "../Form/Radio/ThemeRadio.astro"
   </fieldset>
 </form>
 
-    <script>
-    const colorThemes = document.querySelectorAll('[name="theme"]');
+<script>
+  const colorThemes = document.querySelectorAll('[name="theme"]');
 
-    const storeTheme = (flavor: string, theme: "light" | "dark") => {
-      localStorage.setItem("flavor", flavor);
-      localStorage.setItem("theme", theme);
-    }
+  const storeTheme = (flavor: string, theme: "light" | "dark") => {
+    localStorage.setItem("flavor", flavor);
+    localStorage.setItem("theme", theme);
+  };
 
-    const setTheme = () => {
-      const activeTheme = localStorage.getItem("theme") ?? "dark";
-      colorThemes.forEach((themeOption: any) => {
-        themeOption.checked = themeOption.id === activeTheme;
-      });
-      document.documentElement.className = activeTheme;
-    };
+  const setTheme = () => {
+    console.log("setTheme called");
+    const activeTheme = localStorage.getItem("theme") ?? "dark";
+    const activeFlavor = localStorage.getItem("flavor") ?? "mocha";
 
     colorThemes.forEach((themeOption: any) => {
-      themeOption.onclick =  () => {
-        const flavor = themeOption.id ?? "mocha"
-        const theme = themeOption.dataset.theme ?? "dark"
-        storeTheme(flavor,theme);
-        document.documentElement.className = theme
-      };
-    })
+      themeOption.checked = themeOption.id === activeFlavor;
+    });
 
-    document.onload = setTheme
+    document.documentElement.className = activeTheme;
+  };
 
-    document.onload = (setTheme() as any)
-  </script>
+  const form = document.getElementById("form");
+
+  form?.addEventListener("click", (ev) => {
+    const flavor = (ev?.target as any)?.id || "mocha";
+    const theme = (ev?.target as any)?.dataset?.theme || "dark";
+
+    storeTheme(flavor, theme);
+    document.documentElement.className = theme;
+  });
+
+  window.addEventListener("load", () => {
+    setTheme();
+  });
+</script>

@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -12,7 +13,7 @@
 }
 
 * {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 /* primary - mantle */
@@ -112,7 +113,7 @@ html {
   background-color: #fff;
 }
 
-.color-picker>fieldset {
+.color-picker > fieldset {
   border: 0;
   display: flex;
   flex-direction: column;
@@ -153,7 +154,7 @@ html {
 }
 
 .nav-container {
-  @apply w-full sticky backdrop-blur-md bg-gradient-to-t z-10 border-black/25 dark:border-white/50
+  @apply w-full sticky backdrop-blur-sm bg-gradient-to-t z-10 border-black/25 dark:border-white/50;
 }
 
 .theme-screen-w {

@@ -7,7 +7,13 @@ import { getAllPublishedBlogs } from "../../utils"
 const allPosts = await getAllPublishedBlogs()
 ---
 
-<Layout {...{} as any} >
+<Layout 
+{...{
+title: `Insights and Innovations | Expert Web Developer Blog - Anmol's Web Development Journey`,
+description: `Explore the latest trends, tips, and tutorials in web development with Anmol's expert blog. From JavaScript and React to Tailwind CSS and full stack development, stay ahead in the digital world with our insightful articles.`,
+keywords: `web development blog, JavaScript tutorials, React tutorials, Tailwind CSS tips, full stack development, frontend development, web development trends, responsive web design, UI/UX design, software development, coding best practices, web developer insights, Anmol's blog, expert web developer, web development articles, web developer blog India`
+} as any}
+>
 	<section class="min-h-[80vh]" >
 		<div class="flex flex-col gap-4 my-2 mb-6"> 
 			<BlogTitle>

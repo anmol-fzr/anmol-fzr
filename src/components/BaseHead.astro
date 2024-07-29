@@ -31,16 +31,12 @@ const {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="theme-color" content="#181825" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap" />
-
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
-<meta name="google-site-verification" content="" />
 <link rel="manifest" href="/manifest.json" />
 
 <link rel="canonical" href={canonicalURL} />
-
 
 <title>{title}</title>
 <meta name="title" content={title} />
@@ -61,5 +57,16 @@ const {
 <meta name="twitter:site" content="@anmol_fzr">
 <meta property="twitter:url" content={Astro.url} />
 <meta name="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
 <meta name="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script>
+const curr = window.location.host
+
+if (curr === "anmol-fzr.web.app") {
+	console.log("will redirect ", curr)
+}
+</script>
+
+
