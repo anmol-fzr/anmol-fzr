@@ -154,9 +154,10 @@ html {
 }
 
 .nav-container {
-  @apply w-full sticky backdrop-blur-sm bg-gradient-to-t z-10 border-black/25 dark:border-white/50;
+  @apply w-full sticky backdrop-blur-sm z-10;
+  /*@apply w-full sticky backdrop-blur-sm z-10 border-black/10 dark:border-white/10;*/
 }
 
 .theme-screen-w {
-  @apply w-full max-w-screen-xl mx-auto;
+  @apply w-full max-w-screen-2xl mx-auto;
 }
