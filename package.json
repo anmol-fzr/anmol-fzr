@@ -14,6 +14,7 @@
     "@astrojs/check": "^0.6.0",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
+    "@iconify-json/simple-icons": "^1.2.12",
     "astro": "^4.11.5",
     "astro-icon": "^1.1.0",
     "astro-imagetools": "^0.9.0",

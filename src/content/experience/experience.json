@@ -1,68 +1,68 @@
 {
-  "content": [
-    {
-      "name": "Community",
-      "data": [
-        {
-          "title": "Web Development Lead",
-          "from": "August 2023",
-          "at": "GDSC SBSSU",
-          "to": "present"
-        }
-      ]
-    },
-    {
-      "name": "Open Source Contribution",
-      "data": [
-        {
-          "title": "chaynHQ/bloom-frontend",
-          "href": "https://github.com/chaynhq/bloom-frontend"
-        },
-        {
-          "title": "Farzin-Firoozi/react-modern-drawer",
-          "href": "https://github.com/Farzin-Firoozi/react-modern-drawer"
-        }
-      ]
-    },
-    {
-      "name": "Internship",
-      "data": [
-        {
-          "title": "SDE Intern",
-          "from": "June 2024",
-          "at": "Supabrain Ai Pvt Ltd",
-          "to": "Present"
-        },
-        {
-          "title": "Full Stack Web Developer",
-          "from": "September 2023",
-          "at": "Buildup Communication",
-          "to": "November 2023"
-        },
-        {
-          "title": "Full Stack Web Dev Intern",
-          "from": "June 2023",
-          "at": "Buildup Communication",
-          "to": "August 2023"
-        }
-      ]
-    },
-    {
-      "name": "Hackathon",
-      "data": [
-        {
-          "title": "UDYAM: Soar to Shine",
-          "from": "May 2023"
-        },
-        {
-          "title": "Codevista 2.0",
-          "from": "March 2023"
-        },
-        {
-          "title": "SBSSU Samrt Hackathon",
-          "from": "Feb 2023"
-        }
-      ]
-    }
-  ]
+	"content": [
+		{
+			"name": "Community",
+			"data": [
+				{
+					"title": "Web Development Lead",
+					"from": "August 2023",
+					"at": "GDSC SBSSU",
+					"to": "present"
+				}
+			]
+		},
+		{
+			"name": "Open Source Contribution",
+			"data": [
+				{
+					"title": "chaynHQ/bloom-frontend",
+					"href": "https://github.com/chaynhq/bloom-frontend"
+				},
+				{
+					"title": "Farzin-Firoozi/react-modern-drawer",
+					"href": "https://github.com/Farzin-Firoozi/react-modern-drawer"
+				}
+			]
+		},
+		{
+			"name": "Internship",
+			"data": [
+				{
+					"title": "SDE Intern",
+					"from": "June 2024",
+					"at": "Supabrain Ai Pvt Ltd",
+					"to": "Oct 2024"
+				},
+				{
+					"title": "Full Stack Web Developer",
+					"from": "September 2023",
+					"at": "Buildup Communication",
+					"to": "November 2023"
+				},
+				{
+					"title": "Full Stack Web Dev Intern",
+					"from": "June 2023",
+					"at": "Buildup Communication",
+					"to": "August 2023"
+				}
+			]
+		},
+		{
+			"name": "Hackathon",
+			"data": [
+				{
+					"title": "UDYAM: Soar to Shine",
+					"from": "May 2023"
+				},
+				{
+					"title": "Codevista 2.0",
+					"from": "March 2023"
+				},
+				{
+					"title": "SBSSU Samrt Hackathon",
+					"from": "Feb 2023"
+				}
+			]
+		}
+	]
 }

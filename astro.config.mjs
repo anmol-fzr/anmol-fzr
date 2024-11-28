@@ -6,7 +6,16 @@ import AstroPWA from "@vite-pwa/astro";
 
 export default defineConfig({
   site: "https://withanmol.com",
-  integrations: [sitemap(), tailwind({}), icon(), AstroPWA()],
+  integrations: [
+    sitemap(),
+    tailwind({}),
+    icon({
+      include: {
+        "simple-icons": ["hono", "nodedotjs"],
+      },
+    }),
+    AstroPWA(),
+  ],
   devToolbar: {
     enabled: false,
   },

@@ -1,16 +1,20 @@
 ---
 interface Props {
-  id:string
+  id: string;
 }
-const { id } = Astro.props
+const { id } = Astro.props;
+//height: clamp(800px, calc(100vh - 153px), 1080px);
 ---
 
-<section {...{ id }} class="flex w-full flex-col items-left mx-auto justify-center md:py-0 section">
-  <slot>
-</section>
+<section
+  {...{ id }}
+  class="flex w-full flex-col items-left mx-auto justify-center my-6 section py-4"
+>
+  <slot />
 
-<style>
-  .section {
-    min-height: calc(100vh - 153px)
-  }
-</style>
+  <style>
+    .section {
+      min-height: calc(100vh - 153px);
+    }
+  </style>
+</section>
