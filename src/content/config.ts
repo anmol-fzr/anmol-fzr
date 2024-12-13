@@ -7,7 +7,7 @@ const experience = defineCollection({
   schema: experienceSchema,
 })
 
-const project = defineCollection({
+const projects = defineCollection({
   type: "data",
   schema: projectSchema
 });
@@ -17,7 +17,7 @@ const blog = defineCollection({
   schema: blogSchema
 });
 
-const collections = { blog, experience, project };
+const collections = { blog, experience, projects };
 
 type Blog = CollectionEntry<"blog">
 type BlogData = Blog["data"]
