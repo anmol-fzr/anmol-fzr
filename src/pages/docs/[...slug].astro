@@ -5,6 +5,7 @@ import type { Blog } from "../../content/config"
 
 export async function getStaticPaths() {
 	const docs = await getAllDocs()
+  console.log(docs)
 	return docs.map((doc) => ({
 		params: { slug: doc.slug },
 		props: doc,

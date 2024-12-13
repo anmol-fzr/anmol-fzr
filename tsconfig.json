@@ -4,11 +4,12 @@
     "strictNullChecks": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
+    "strictNullChecks": true
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "**/*.astro",
+    "**/*.astro"
   ],
   "exclude": [
     "node_modules"

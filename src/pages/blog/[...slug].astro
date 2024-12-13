@@ -1,22 +1,22 @@
 ---
-import { getAllPublishedBlogs } from "../../utils"
-import BlogPost from '../../layouts/BlogPost.astro';
-import type { Blog } from "../../content/config"
+import { getAllPublishedBlogs } from "../../utils";
+import BlogPost from "../../layouts/BlogPost.astro";
+import type { Blog } from "../../content/config";
 
 export async function getStaticPaths() {
-	const blogs = await getAllPublishedBlogs()
-	return blogs.map((blog) => ({
-		params: { slug: blog.slug },
-		props: blog,
-	}));
+  const blogs = await getAllPublishedBlogs();
+  return blogs.map((blog) => ({
+    params: { slug: blog.slug },
+    props: blog,
+  }));
 }
 
-type Props = Blog
+type Props = Blog;
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
 <BlogPost {...post.data}>
-	<Content />
+  <Content />
 </BlogPost>

@@ -11,11 +11,11 @@
     "preview": "astro preview --host"
   },
   "dependencies": {
-    "@astrojs/check": "^0.6.0",
-    "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.3",
     "@iconify-json/simple-icons": "^1.2.12",
-    "astro": "^4.11.5",
+    "astro": "^5.0.5",
     "astro-icon": "^1.1.0",
     "astro-imagetools": "^0.9.0",
     "sharp": "^0.33.4",

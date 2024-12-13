@@ -1,4 +1,4 @@
-import { getCollection, getEntryBySlug, getEntries } from "astro:content";
+import { getCollection, getEntry, getEntries } from "astro:content";
 import type { Blog, BlogData } from "./content/config"
 
 const sortBlogByDate = (blogs: Blog[]) => blogs.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -14,7 +14,7 @@ const getAllPublishedBlogs = async () => {
 }
 
 const getBlogBySlug = async (slug: string) => {
-  const blog = await getEntryBySlug("blog", slug)
+  const blog = await getEntry("blog", slug)
   return blog
 }
 

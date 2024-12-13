@@ -23,7 +23,7 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: "viewport",
   },
-  experimental: {
-    contentCollectionCache: true,
-  },
+  //experimental: {
+  //  contentCollectionCache: true,
+  //},
 });

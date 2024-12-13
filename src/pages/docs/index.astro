@@ -1,25 +1,28 @@
 ---
 import Layout from "../../layouts/layout.astro";
-import DocsCard from "../../components/Docs/DocsCard.astro"
+import DocsCard from "../../components/Docs/DocsCard.astro";
 import BlogTitle from "../../components/Typo/BlogTitle.astro";
-import { getAllDocs } from "../../utils"
+import { getAllDocs } from "../../utils";
 
-const allPosts = await getAllDocs()
+const allPosts = await getAllDocs();
 ---
 
-<Layout {...{} as any} >
-	<section class="min-h-[80vh]" >
-		<div class="flex flex-col gap-4 my-2 mb-6"> 
-			<BlogTitle>
-				Docs
-			</BlogTitle>
-		</div>
-		<ul class="flex flex-wrap gap-8">
-			{allPosts.map(({ slug, data: { heroImage, title, description, keywords } },i) => (
-					<DocsCard size={i === 0 ? "lg": "sm"}
-						{...({ heroImage, title, slug ,description, keywords})}
-					/>
-				))}
-		</ul>
-	</section>
+<Layout {...{} as any}>
+  <section class="min-h-[80vh]">
+    <div class="flex flex-col gap-4 my-2 mb-6">
+      <BlogTitle> Docs </BlogTitle>
+    </div>
+    <ul class="flex flex-wrap gap-8">
+      {
+        allPosts.map(
+          ({ slug, data: { heroImage, title, description, keywords } }, i) => (
+            <DocsCard
+              size={i === 0 ? "lg" : "sm"}
+              {...{ heroImage, title, slug, description, keywords }}
+            />
+          ),
+        )
+      }
+    </ul>
+  </section>
 </Layout>
