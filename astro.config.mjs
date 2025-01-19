@@ -11,7 +11,7 @@ export default defineConfig({
     tailwind({}),
     icon({
       include: {
-        "simple-icons": ["hono", "nodedotjs"],
+        "simple-icons": ["hono", "nodedotjs", "go"],
       },
     }),
     AstroPWA(),

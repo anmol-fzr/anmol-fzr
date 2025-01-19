@@ -21,7 +21,7 @@
       "icon": "astro"
     },
     {
-      "name": "Astro",
+      "name": "Hono",
       "icon": "simple-icons:hono"
     },
     {
@@ -43,6 +43,10 @@
     {
       "name": "Git",
       "icon": "git"
+    },
+    {
+      "name": "Go",
+      "icon": "simple-icons:go"
     }
   ],
   "links": [

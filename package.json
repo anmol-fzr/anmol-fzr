@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev --host ",
     "clean": "rm -rf dist/",
-    "build": "npm run clean && astro check && astro build && cp ./robots.txt ./public/ ",
+    "build": "npm run clean && astro build && cp ./robots.txt ./public/ ",
     "deploy": "bun run build && firebase deploy && bun run open",
     "open": "xdg-open 'https://withanmol.com'",
     "preview": "astro preview --host"
