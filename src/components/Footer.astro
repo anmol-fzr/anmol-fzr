@@ -1,10 +1,14 @@
 ---
 import FootLinks from "./Footer/FootLinks.astro";
+import { twMerge } from "tailwind-merge";
+
+const animation =
+  "animate-slide_up supports-no-scroll-driven-animations:animate-none [animation-range:0px_75vh] [animation-timeline:scroll()]";
+const baseClass =
+  "nav-container md:block bottom-0 p-2 pt-5 pb-0 md:pb-2 bg-gradient-to-t from-white to-transparent dark:from-black";
 ---
 
-<footer
-  class="nav-container md:block bottom-0 p-2 pt-5 pb-0 md:pb-2 bg-gradient-to-t from-white to-transparent dark:from-black"
->
+<footer class={twMerge(baseClass, animation)}>
   <nav class="flex items-center justify-between text-text theme-screen-w">
     <FootLinks />
   </nav>

@@ -1,13 +1,21 @@
 ---
-import { Icon } from "astro-icon/components"
-type Props = {
-    text: string;
-    href: string;
-    icon: any;
-};
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  text: string;
+  href: string;
+  icon: any;
+}
+
 const { text, href, icon } = Astro.props;
 ---
 
-<a href={href} aria-label={text} aria-labelledby={text} target="_blank">
-  <Icon name={icon}  size={32}/>
+<a
+  href={href}
+  aria-label={text}
+  aria-labelledby={text}
+  target="_blank"
+  class="hover:-translate-y-1 hover:scale-110"
+>
+  <Icon name={icon} size={32} />
 </a>

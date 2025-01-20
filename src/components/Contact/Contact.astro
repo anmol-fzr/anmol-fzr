@@ -5,9 +5,17 @@ import FootLinks from "../Footer/FootLinks.astro";
 ---
 
 <Section id="contact">
-  <div class="flex flex-col items-start justify-between w-full gap-12 md:flex-row" >
-    <div class="flex flex-col items-center w-full gap-4 md:items-start md:w-6/12 mx-auto " >
-      <Heading>Just say hi 👋.</Heading>
+  <div
+    class="flex flex-col items-start justify-between w-full gap-12 md:flex-row"
+  >
+    <div
+      class="flex flex-col items-center w-full gap-4 md:items-start md:w-6/12 mx-auto"
+    >
+      <Heading>
+        Just say
+        <span class="group-hover:text-secondary"> hi </span>
+        👋.
+      </Heading>
       <p class="text-lg text-center md:text-left md:text-2xl">
         I&apos;m always open to discuss your project and talk about new things
       </p>
@@ -15,6 +23,6 @@ import FootLinks from "../Footer/FootLinks.astro";
         <FootLinks />
       </div>
     </div>
-  <!-- <ContactForm /> -->
+    <!-- <ContactForm /> -->
   </div>
 </Section>

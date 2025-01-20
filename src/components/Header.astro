@@ -1,9 +1,15 @@
 ---
 import Links from "./Navbar/Links.astro";
 import { NAME } from "../config.ts";
+import { twMerge } from "tailwind-merge";
+
+const animation =
+  "animate-slide_down supports-no-scroll-driven-animations:animate-none [animation-range:0px_60vh] [animation-timeline:scroll()]";
+const baseClass =
+  "nav-container py-4 top-0 bg-gradient-to-b from-white to-transparent dark:from-black z-20";
 ---
 
-<header class="nav-container py-4 top-0 bg-gradient-to-b from-white to-transparent dark:from-black">
+<header class={twMerge(baseClass, animation)}>
   <nav
     class="flex items-center justify-between theme-screen-w mx-auto h-full text-text"
   >

@@ -68,10 +68,20 @@ module.exports = {
             zIndex: -1,
           },
         },
+        slide_down: {
+          '0%': { transform: 'translateY(-100%)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+        slide_up: {
+          '0%': { transform: 'translateY(100%)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
       },
       animation: {
         "fade-out-down": "fade-out-down linear forwards",
         "make-it-bigger": "make-it-bigger linear forwards",
+        slide_down: 'slide_down 0.3s ease-in',
+        slide_up: 'slide_up 0.3s ease-out',
       },
       supports: {
         "no-scroll-driven-animations": "not(animation-timeline: scroll())",
