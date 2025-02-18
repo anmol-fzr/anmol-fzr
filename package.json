@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "astro dev --host ",
     "clean": "rm -rf dist/",
-    "build": "npm run clean && astro build && cp ./robots.txt ./public/ ",
+    "build": "astro build && cp ./robots.txt ./public/ ",
     "deploy": "bun run build && firebase deploy && bun run open",
     "open": "xdg-open 'https://withanmol.com'",
-    "preview": "astro preview --host"
+    "preview-old": "astro preview --host",
+    "preview": "wrangler pages dev ./dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "^12.2.1",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.4",
     "@iconify-json/simple-icons": "^1.2.20",
@@ -25,10 +27,12 @@
     "typescript": "^5.7.3"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "4.20250204.0",
     "@tailwindcss/typography": "^0.5.16",
     "@vite-pwa/astro": "^0.2.0",
     "cssnano": "^7.0.6",
     "prettier": "^3.4.2",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "wrangler": "3.107.2"
   }
 }

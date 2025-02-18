@@ -4,6 +4,8 @@ import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import AstroPWA from "@vite-pwa/astro";
 
+import cloudflare from "@astrojs/cloudflare";
+
 export default defineConfig({
   site: "https://withanmol.com",
   integrations: [
@@ -19,11 +21,17 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  experimental: {
+    contentCollectionCache: true,
+  },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: "viewport",
   },
-  //experimental: {
-  //  contentCollectionCache: true,
-  //},
+  adapter: cloudflare({
+    imageService: "cloudflare",
+    platformProxy: {
+      enabled: true
+    }
+  }),
 });
