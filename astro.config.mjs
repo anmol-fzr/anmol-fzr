@@ -21,9 +21,6 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  experimental: {
-    contentCollectionCache: true,
-  },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: "viewport",

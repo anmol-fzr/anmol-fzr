@@ -4,36 +4,34 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ThemeSwitch from "../components/Footer/ThemeSwitch.astro";
-import { ClientRouter } from "astro:transitions";
 
 type Props = CollectionEntry<"blog">["data"] & {
-	pubDate: string | Date
-}
+  pubDate: string | Date;
+};
 
 const props = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="dark">
-	<head>
-		<BaseHead {...props} image={props.heroImage} />
-		<ClientRouter />
-	</head>
-	<body class="bg-primary text-text">
-		<Header/>
-		<main class="p-4 text-text theme-screen-w">
-			<slot>
-		</main>
-		<Footer />
-    <ThemeSwitch />
-	</body>
-	<script>
-	if (!localStorage.getItem("theme")) {
-		localStorage.setItem("theme", "dark")
-	}
-	if (!localStorage.getItem("flavor")) {
-		localStorage.setItem("flavor", "mocha")
-	}
-	</script>
-
-</html> 
+  <head>
+    <BaseHead {...props} image={props.heroImage} />
+    <!--<ClientRouter />-->
+  </head>
+  <body class="bg-primary text-text">
+    <Header />
+    <main class="p-4 text-text theme-screen-w">
+      <slot />
+      <Footer />
+      <ThemeSwitch />
+    </main>
+    <script>
+      if (!localStorage.getItem("theme")) {
+        localStorage.setItem("theme", "dark");
+      }
+      if (!localStorage.getItem("flavor")) {
+        localStorage.setItem("flavor", "mocha");
+      }
+    </script>
+  </body>
+</html>
