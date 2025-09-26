@@ -1,11 +1,15 @@
 ---
 import Section from "../Section/Section.astro";
-import { NAME, JOB_TITLE } from "../../config.ts"
+import { NAME, JOB_TITLE } from "../../config.ts";
 ---
 
 <Section id="home">
   <div class="flex flex-col items-center w-full h-fit">
-      <h1 class="animate-make-it-bigger supports-no-scroll-driven-animations:animate-none [animation-range:0px_70vh] [animation-timeline:scroll()] text-4xl md:text-6xl" >I`m {NAME}</h1>
-      <p class="text-xl md:text-3xl text-center">{JOB_TITLE}</p>
+    <h1
+      class="animate-make-it-bigger supports-no-scroll-driven-animations:animate-none [animation-range:0px_70vh] [animation-timeline:scroll()] text-4xl md:text-6xl"
+    >
+      I`m {NAME}
+    </h1>
+    <p class="text-xl md:text-3xl text-center">{JOB_TITLE}</p>
   </div>
 </Section>

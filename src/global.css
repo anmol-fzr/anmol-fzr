@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #181825;
+  --color-secondary: #cba6f7;
+  --color-text: #cdd6f4;
+  --color-accent: #f5e0dc;
+
+
+}
+
 
 @layer base {
+
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -14,51 +24,6 @@
 
 * {
   transition: all 0.15s ease-in-out;
-}
-
-/* primary - mantle */
-/* secondary - mauve */
-/* accent - rosewater */
-/* text - text */
-
-:root {
-  --latte-primary: #e6e9ef;
-  --frappe-primary: #292c3c;
-  --mocha-primary: #181825;
-  --macchiato-primary: #1e2030;
-
-  --clr-primary: var(--mocha-primary);
-  --clr-secondary: #cba6f7;
-  --clr-text: #cdd6f4;
-  --clr-accent: #f5e0dc;
-}
-
-:root:has(#latte:checked) {
-  --clr-primary: var(--latte-primary);
-  --clr-secondary: #8839ef;
-  --clr-accent: #502cdd;
-  --clr-text: #181825;
-}
-
-:root:has(#frappe:checked) {
-  --clr-primary: var(--frappe-primary);
-  --clr-secondary: #ca9ee6;
-  --clr-accent: #f2d5cf;
-  --clr-text: #c6d0f5;
-}
-
-:root:has(#macchiato:checked) {
-  --clr-primary: var(--macchiato-primary);
-  --clr-secondary: #c6a0f6;
-  --clr-accent: #f4dbd6;
-  --clr-text: #cad3f5;
-}
-
-:root:has(#mocha:checked) {
-  --clr-primary: var(--mocha-primary);
-  --clr-secondary: #cba6f7;
-  --clr-text: #cdd6f4;
-  --clr-accent: #f5e0dc;
 }
 
 body {
@@ -78,9 +43,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* .input-styles { */
-/*   @apply w-full p-3 px-6 text-white border rounded-md outline-none placeholder:normal-case focus:outline-none border-white/25 focus:border-white/75 bg-primary/75; */
-/* } */
+.input-styles {
+  @apply w-full p-3 px-6 text-white border rounded-md outline-none placeholder:normal-case focus:outline-none border-white/25 focus:border-white/75 bg-primary/75;
+}
 
 ::-webkit-scrollbar {
   height: 4px;
@@ -113,7 +78,7 @@ html {
   background-color: #fff;
 }
 
-.color-picker > fieldset {
+.color-picker>fieldset {
   border: 0;
   display: flex;
   flex-direction: column;
@@ -141,21 +106,12 @@ html {
   --radio-color: var(--latte-primary);
 }
 
-.color-picker input[type="radio"]#frappe {
-  --radio-color: var(--frappe-primary);
-}
-
-.color-picker input[type="radio"]#macchiato {
-  --radio-color: var(--macchiato-primary);
-}
-
 .color-picker input[type="radio"]#mocha {
   --radio-color: var(--mocha-primary);
 }
 
 .nav-container {
   @apply w-full sticky backdrop-blur-sm z-10;
-  /*@apply w-full sticky backdrop-blur-sm z-10 border-black/10 dark:border-white/10;*/
 }
 
 .theme-screen-w {

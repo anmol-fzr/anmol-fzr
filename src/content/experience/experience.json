@@ -5,15 +5,19 @@
 			"data": [
 				{
 					"title": "Web Development Lead",
-					"from": "August 2023",
+					"from": "Aug 2023",
 					"at": "GDSC SBSSU",
-					"to": "present"
+					"to": "Aug 2025"
 				}
 			]
 		},
 		{
 			"name": "Open Source Contribution",
 			"data": [
+				{
+					"title": "better-auth/better-auth",
+					"href": "https://github.com/better-auth/better-auth"
+				},
 				{
 					"title": "chaynHQ/bloom-frontend",
 					"href": "https://github.com/chaynhq/bloom-frontend"
@@ -28,12 +32,6 @@
 			"name": "Internship",
 			"data": [
 				{
-					"title": "Full Stack Developer Intern",
-					"from": "Jan 2025",
-					"at": "Attack Capital",
-					"to": "Present"
-				},
-				{
 					"title": "SDE Intern",
 					"from": "June 2024",
 					"at": "Supabrain Ai Pvt Ltd",
@@ -41,15 +39,15 @@
 				},
 				{
 					"title": "Full Stack Web Developer",
-					"from": "September 2023",
+					"from": "Sept 2023",
 					"at": "Buildup Communication",
-					"to": "November 2023"
+					"to": "Nov 2023"
 				},
 				{
 					"title": "Full Stack Web Dev Intern",
 					"from": "June 2023",
 					"at": "Buildup Communication",
-					"to": "August 2023"
+					"to": "Aug 2023"
 				}
 			]
 		},

@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from '@tailwindcss/vite';
 import icon from "astro-icon";
 import AstroPWA from "@vite-pwa/astro";
 
@@ -9,14 +9,13 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   site: "https://withanmol.com",
   integrations: [
-    sitemap(),
-    tailwind({}),
+    //sitemap(),
     icon({
       include: {
         "simple-icons": ["hono", "nodedotjs", "go"],
       },
     }),
-    AstroPWA(),
+    //AstroPWA(),
   ],
   devToolbar: {
     enabled: false,
@@ -31,4 +30,7 @@ export default defineConfig({
       enabled: true
     }
   }),
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });

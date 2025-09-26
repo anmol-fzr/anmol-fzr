@@ -6,33 +6,40 @@
     "dev": "astro dev --host ",
     "clean": "rm -rf dist/",
     "build": "astro build && cp ./robots.txt ./public/ ",
-    "deploy": "bun run build && firebase deploy && bun run open",
+    "deploy": "wrangler pages deploy --project-name anmol-fzr ./dist",
     "open": "xdg-open 'https://withanmol.com'",
     "preview-old": "astro preview --host",
     "preview": "wrangler pages dev ./dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/cloudflare": "^12.2.3",
-    "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^6.0.0",
-    "@iconify-json/simple-icons": "^1.2.20",
-    "astro": "^5.4.1",
+    "@astrojs/cloudflare": "^12.6.2",
+    "@astrojs/sitemap": "^3.4.2",
+    "@astrojs/tailwind": "^6.0.2",
+    "@iconify-json/simple-icons": "^1.2.46",
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.12.8",
     "astro-icon": "^1.1.5",
     "astro-imagetools": "^0.9.0",
     "sharp": "^0.33.5",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss": "^3.4.17",
-    "tailwindcss-fluid-type": "^2.0.7",
-    "typescript": "^5.7.3"
+    "tailwindcss": "^4.1.11",
+    "tailwindcss-fluid-type": "^2.0.7"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20250204.0",
     "@tailwindcss/typography": "^0.5.16",
     "@vite-pwa/astro": "^0.2.0",
-    "cssnano": "^7.0.6",
-    "prettier": "^3.4.2",
+    "cssnano": "^7.1.0",
+    "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
+    "rollup-plugin-visualizer": "^5.14.0",
+    "typescript": "^5.9.2",
     "wrangler": "3.107.2"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "core-js"
+    ]
   }
 }

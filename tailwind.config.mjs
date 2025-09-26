@@ -2,19 +2,12 @@ import Fluid from "tailwindcss-fluid-type";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  jit: true,
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,svg}",
     "./public/**/*.svg",
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "var(--clr-primary)",
-        secondary: "var(--clr-secondary)",
-        accent: "var(--clr-accent)",
-        text: "var(--clr-text)",
-      },
       keyframes: {
         "fade-out-down": {
           from: {
