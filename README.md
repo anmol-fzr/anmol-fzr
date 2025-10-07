@@ -12,6 +12,8 @@
 🔁 Always learning — currently diving deep into **CI/CD pipelines**, **GitHub Actions**, and **deployment automation**.  
 🪟 Daily driver: **DWM** on Arch Linux.  
 
+> 🧙‍♂️ Vim is all I need — and yes, **Catppuccin everywhere** is a lifestyle, not a theme. ☕  
+
 ---
 
 ## ⚙️ Tech Stack
